@@ -9,13 +9,23 @@ namespace Timpex.Kata
         public string Print()
         {
             _counter++;
-            if (_counter % 3 == 0 & _counter % 5 == 0)
+            if (IsTim() & IsPex())
                 return "timpex";
-            if (_counter % 3 == 0)
+            if (IsTim())
                 return "tim";
-            if (_counter % 5 == 0)
+            if (IsPex())
                 return "pex";
             return _counter.ToString();
+        }
+
+        private bool IsPex()
+        {
+            return _counter % 5 == 0;
+        }
+
+        private bool IsTim()
+        {
+            return _counter % 3 == 0;
         }
     }
 }
