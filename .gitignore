@@ -1,0 +1,32 @@
+src/*/*/obj
+src/*/*/bin
+src/*/*/Bin
+src/*/*/ClientBin
+src/*/*/*ReSharper*
+src/*/*ReSharper*
+src/*/*DotSettings*
+src/*/NDepend*
+src/*/*.cache
+src/*/*NCrunch*
+src/*/*.ncrunchsolution*
+src/*/*.ncrunchproject
+src/*/*.suo
+src/*/*/*.user
+src/*/TestResults
+src/Timpex.WindowsPhone.KN.Traffic.Truck/
+*.orig
+Build
+deps
+deploy
+sql/CMD/sql
+*TestResult.xml
+*TMS.Mobile.TestResult.xml
+*.tap
+src/*/*/Windows Mobile*/Debug/*
+src/*/*/Windows Mobile*/Release/*
+src/*/*/*.aps
+src/*/*.ncb
+sql/CMD/begin.txt
+sql/CMD/end.txt
+sql/Merged scripts/*.sql
+uq/concept/help-en/SECMAN.GID
