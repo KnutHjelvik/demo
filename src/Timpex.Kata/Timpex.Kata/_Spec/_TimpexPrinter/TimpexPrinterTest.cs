@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Timpex.Kata._Spec._TimpexPrinter
 {
     [TestFixture]
     public class TimpexPrinterTest
     {
-        private TimpexPrinter _printer = new TimpexPrinter();        
+        private readonly TimpexPrinter _printer = new TimpexPrinter();        
         
         [TestFixtureSetUp]
         public void When_Printing()
@@ -35,7 +30,6 @@ namespace Timpex.Kata._Spec._TimpexPrinter
             Assert.AreEqual("13", _printer.Print());
             Assert.AreEqual("14", _printer.Print());
             Assert.AreEqual("timpex", _printer.Print());
-
         }
     }
 }
