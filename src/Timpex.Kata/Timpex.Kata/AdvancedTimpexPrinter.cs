@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Timpex.Kata.AdvancedTimpexPrinter
+namespace Timpex.Kata
 {
 
     public class TimpexAdvancedPrinter
@@ -27,6 +27,8 @@ namespace Timpex.Kata.AdvancedTimpexPrinter
             _timpexCounter++;
             if (_timpexCounter == 1)
                 return "timpex";
+            if (IsTim(_timpexCounter) && IsPex(_timpexCounter))
+                return "timpex timpex";
             if (IsTim(_timpexCounter))
                 return "timpex tim";
             if (IsPex(_timpexCounter))
@@ -39,6 +41,8 @@ namespace Timpex.Kata.AdvancedTimpexPrinter
             _timCounter++;
             if (_timCounter == 1)
                 return "tim";
+            if (IsTim(_timCounter) && IsPex(_timCounter))
+                return "tim timpex";
             if (IsTim(_timCounter))
                 return "tim tim";
             if (IsPex(_timCounter))
@@ -51,6 +55,8 @@ namespace Timpex.Kata.AdvancedTimpexPrinter
             _pexCounter++;
             if (_pexCounter == 1)
                 return "pex";
+            if (IsTim(_pexCounter) && IsPex(_pexCounter))
+                return "pex timpex";
             if (IsTim(_pexCounter))
                 return "pex tim";
             if (IsPex(_pexCounter))

@@ -1,8 +1,6 @@
-﻿using System.Diagnostics;
-
-namespace Timpex.Kata
+﻿namespace Timpex.Kata
 {
-    public class TimpexPrinter
+    public class TimpexPrinterOld : Printer
     {
         private int _counter;
 

@@ -45,12 +45,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvancedTimpexPrinter\AdvancedTimpexPrinter.cs" />
-    <Compile Include="TimpexPrinter.cs" />
+    <Compile Include="AdvancedTimpexPrinterTwo.cs" />
+    <Compile Include="AdvancedTimpexPrinter.cs" />
+    <Compile Include="ByAdvancedTimpexPrinter2\Counter.cs" />
+    <Compile Include="ByAdvancedTimpexPrinter2\NumberCounter.cs" />
+    <Compile Include="ByAdvancedTimpexPrinter2\CounterPredicate.cs" />
+    <Compile Include="ByAdvancedTimpexPrinter2\PexPrinter.cs" />
+    <Compile Include="ByAdvancedTimpexPrinter2\TimpexPrinter.cs" />
+    <Compile Include="ByAdvancedTimpexPrinter2\TimPrinter.cs" />
+    <Compile Include="Printer.cs" />
+    <Compile Include="TimpexPrinterOld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_Spec\_AdvancedTimpexPrinter\AdvancedTimpexPrinterTest.cs" />
-    <Compile Include="_Spec\_TimpexPrinter\TimpexPrinterTest.cs" />
+    <Compile Include="_Spec\CounterPredicateTest.cs" />
+    <Compile Include="_Spec\NumberCounterTest.cs" />
+    <Compile Include="_Spec\PexPrinterTest.cs" />
+    <Compile Include="_Spec\TimPrinterTest.cs" />
+    <Compile Include="_Spec\_AdvancedTimpexPrinterTwo\HandleCounter\DividableByThree.cs" />
+    <Compile Include="_Spec\_AdvancedTimpexPrinterTwo\HandleCounter\DividableByFive.cs" />
+    <Compile Include="_Spec\_AdvancedTimpexPrinterTwo\HandleCounter\NotDividableByThree.cs" />
+    <Compile Include="_Spec\_AdvancedTimpexPrinterTwo\HandleCounter\NotDividableByFive.cs" />
+    <Compile Include="_Spec\AdvancedTimpexPrinterTwoTest.cs" />
+    <Compile Include="_Spec\AdvancedTimpexPrinterTest.cs" />
+    <Compile Include="_Spec\TimpexPrinterTest.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
