@@ -21,11 +21,12 @@ namespace Timpex.Kata.ByAdvancedTimpexPrinter2
             if (_counterPredicate.IsDividableWithFive(_numberCounter) &&
                 _counterPredicate.IsDividableWithThree(_numberCounter))
                 return "pex timpex";
-            if (_counterPredicate.IsDividableWithThree(_numberCounter))
-                return "pex tim";
-            if (_counterPredicate.IsDividableWithFive(_numberCounter))
+          if (_counterPredicate.IsDividableWithThree(_numberCounter))
+               return "pex tim";
+          if (_counterPredicate.IsDividableWithFive(_numberCounter))
                 return "pex pex";
             return "pex" + _numberCounter.GetValue().ToString();
+
         }
 
         public PexPrinter(Counter numberCounter, CounterPredicate counterPredicate)

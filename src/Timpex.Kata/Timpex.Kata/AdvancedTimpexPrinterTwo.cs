@@ -18,7 +18,7 @@ namespace Timpex.Kata
             if (_counterPredicate.IsDividableWithFive(_numberCounter) && _counterPredicate.IsDividableWithThree(_numberCounter))
                 return _timpexPrinter.Print();
             if (_counterPredicate.IsDividableWithFive(_numberCounter))
-                    return _pexPrinter.Print();
+                return _pexPrinter.Print();
             if (_counterPredicate.IsDividableWithThree(_numberCounter))
                 return _timPrinter.Print();
             return _numberCounter.GetValue().ToString();

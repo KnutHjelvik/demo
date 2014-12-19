@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="AdvancedTimpexPrinterTwo.cs" />
     <Compile Include="AdvancedTimpexPrinter.cs" />
+    <Compile Include="Base_Act.cs" />
     <Compile Include="ByAdvancedTimpexPrinter2\Counter.cs" />
     <Compile Include="ByAdvancedTimpexPrinter2\NumberCounter.cs" />
     <Compile Include="ByAdvancedTimpexPrinter2\CounterPredicate.cs" />
@@ -67,6 +68,33 @@
     <Compile Include="_Spec\AdvancedTimpexPrinterTwoTest.cs" />
     <Compile Include="_Spec\AdvancedTimpexPrinterTest.cs" />
     <Compile Include="_Spec\TimpexPrinterTest.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\NotDividableByFive_Act\NotDividableByFive_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\NotDividableByFive_Act\WhenDividableByFive_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\DividableByFive_Act\DividableByFive_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\DividableByFive_Act\WhenDividableByFive_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\NotDividableByThree_Act\NotDividableByThree_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\NotDividableByThree_Act\WhenNotDiviableByThree_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\DividableByThree_Act\DividableByThree_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New\DividableByThree_Act\WhenDiviableByThree_Act.cs" />
+    <Compile Include="_Spec_Advanced\_CounterPredicate\New_Act.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New\Get_Act\GetValue_Act.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New\Get_Act\When_GetValue.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New\Increment_Act\IncrementTwice_Act.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New\Increment_Act\Increment_act.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New\Increment_Act\When_IncrementTwice.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New\Increment_Act\When_Increment.cs" />
+    <Compile Include="_Spec_Advanced\_NumberCounter\New_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexPex\Print_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexPex\When_Print.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexCount\Print_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexCount\When_Print.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexTim\Print_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexTim\When_Print.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPex\Print_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPex\When_Print.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexTimpex\Print_Act.cs" />
+    <Compile Include="_Spec_Advanced\_PexPrinter\New\PrintPexTimpex\When_Print.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
