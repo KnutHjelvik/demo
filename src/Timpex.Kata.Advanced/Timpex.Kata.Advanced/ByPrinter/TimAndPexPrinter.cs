@@ -5,7 +5,7 @@ namespace Timpex.Kata.Advanced.ByPrinter
 {
     public class TimAndPexPrinter
     {
-        private WordPrinterWrapper<Word> _timPrinter;
+        private WordPrinterWrapper<Word> _timPrinter = new WordPrinterWrapper<Word>();
         private Word _timpexWord = TimpexWord.New();
         public static Func<TimAndPexPrinter> New = () => new TimAndPexPrinter();
 

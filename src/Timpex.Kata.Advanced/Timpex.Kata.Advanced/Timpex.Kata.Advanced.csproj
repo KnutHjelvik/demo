@@ -135,11 +135,17 @@
     <Compile Include="ByWord\_Spec\_TimWord\New\GetValue_Act.cs" />
     <Compile Include="ByWord\_Spec\_TimWord\New\When_GetValue.cs" />
     <Compile Include="ByWord\_Spec\_TimWord\New_Act.cs" />
-    <Compile Include="TimPex.cs" />
+    <Compile Include="Timpex.cs" />
+    <Compile Include="_Spec\_Timpex\New\IntegrationTests\When_Massprint.cs" />
+    <Compile Include="_Spec\_Timpex\New\PrintThird\Print_Act.cs" />
+    <Compile Include="_Spec\_Timpex\New\PrintThird\When_Print.cs" />
+    <Compile Include="_Spec\_Timpex\New\PrintTwice\Print_Act.cs" />
+    <Compile Include="_Spec\_Timpex\New\PrintTwice\When_Print.cs" />
+    <Compile Include="_Spec\_Timpex\New\PrintOnce\When_Print.cs" />
+    <Compile Include="_Spec\_Timpex\New_Act.cs" />
+    <Compile Include="_Spec\_Timpex\New\PrintOnce\Print_Act.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_Spec\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,5 @@
-﻿using Timpex.Kata.Advanced.ByCounter;
+﻿using System;
+using Timpex.Kata.Advanced.ByCounter;
 using Timpex.Kata.Advanced.ByPredicate;
 
 namespace Timpex.Kata.Advanced.ByPrinter
@@ -11,6 +12,7 @@ namespace Timpex.Kata.Advanced.ByPrinter
         private readonly PexPrinter _pexPrinter = PexPrinter.New();
         private readonly PredicateCore _pexPredicate = PexPredicate.New();
         private readonly TimAndPexPrinter _timAndPexPrinter= TimAndPexPrinter.New();
+        public static Func<TimpexPrinter> New = () => new TimpexPrinter();
         private string _result;
         private Counter _counter;
 
@@ -62,6 +64,10 @@ namespace Timpex.Kata.Advanced.ByPrinter
         private bool IsTimAndPex()
         {
             return IsTim() && IsPex();
+        }
+
+        public TimpexPrinter()
+        {
         }
     }
 }

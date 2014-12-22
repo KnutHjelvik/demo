@@ -6,8 +6,8 @@ namespace Timpex.Kata.Advanced.ByPrinter
 {
     public class CounterPrinter
     {
-        private TextConverter _textConverter;
-        public static Func<CounterPrinter> New = () => new CounterPrinterCo();
+        private TextConverter _textConverter = new TextConverter();
+        public static Func<CounterPrinter> New = () => new CounterPrinter();
 
         public CounterPrinter(TextConverter converter)
         {

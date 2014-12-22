@@ -8,17 +8,28 @@ namespace Timpex.Kata.Advanced
     {
         private TimpexPredicate _timpexPredicate = TimpexPredicate.New();
         private CounterPrinter _counterPrinter = CounterPrinter.New();
-        private TimAndPexPrinter _timAndPexPrinter = TimAndPexPrinter.New();
-        private Counter _counter;
+        private TimpexPrinter _timpexPrinter = TimpexPrinter.New();
+        private Counter _counter = new Counter();
 
-        public Timpex(TimpexPredicate timpexPredicate,CounterPrinter counterPrinter,TimAndPexPrinter timAndPexPrinter)
+        public Timpex(TimpexPredicate timpexPredicate, CounterPrinter counterPrinter, TimpexPrinter timpexPrinter, Counter counter)
         {
-
+            _timpexPredicate = timpexPredicate;
+            _counterPrinter = counterPrinter;
+            _timpexPrinter = timpexPrinter;
+            _counter = counter;
         }
 
-        public string Print(Counter _counter)
+        public string Print()
         {
-            throw new System.Exception();
+            _counter.IncrementCount();
+            if (IsTimpex())
+                return _timpexPrinter.Print(_counter);
+            return _counterPrinter.Print(_counter);
+        }
+
+        private bool IsTimpex()
+        {
+            return _timpexPredicate.Matches(_counter);
         }
 
 

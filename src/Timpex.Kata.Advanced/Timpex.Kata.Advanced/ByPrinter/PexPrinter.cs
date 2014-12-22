@@ -5,7 +5,7 @@ namespace Timpex.Kata.Advanced.ByPrinter
 {
     public class PexPrinter
     {
-        private WordPrinterWrapper<Word> _timPrinter;
+        private WordPrinterWrapper<Word> _timPrinter = new WordPrinterWrapper<Word>();
         private Word _pexWord = PexWord.New();
 
         public static Func<PexPrinter> New = () => new PexPrinter();

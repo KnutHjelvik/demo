@@ -17,7 +17,7 @@ namespace Timpex.Kata.Advanced.ByPredicate
 
         public virtual bool Matches(Counter counter)
         {
-            return _timPredicate.Matches(counter) && _pexPredicate.Matches(counter);
+            return _timPredicate.Matches(counter) || _pexPredicate.Matches(counter);
         }
 
         public TimpexPredicate()
