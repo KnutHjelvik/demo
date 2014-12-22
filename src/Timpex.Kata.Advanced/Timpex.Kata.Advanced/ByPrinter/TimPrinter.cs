@@ -1,19 +1,24 @@
-﻿using Timpex.Kata.Advanced.ByWord;
+﻿using System;
+using Timpex.Kata.Advanced.ByWord;
 
 namespace Timpex.Kata.Advanced.ByPrinter
 {
-    public class TimPrinter:Printer<TimWord>
+    public class TimPrinter
     {
-        private WordPrinterWrapper<TimWord> _timPrinter;
+      
+        private WordPrinterWrapper<Word> _timPrinter;
+        private Word _timWord = TimWord.New();
+        public static Func<TimPrinter> New = () => new TimPrinter();
 
-        public TimPrinter(WordPrinterWrapper<TimWord> timPrinter)
+        public TimPrinter(Word word,WordPrinterWrapper<Word> timPrinter)
         {
             _timPrinter = timPrinter;
+            _timWord = word;
         }
 
-        public virtual string Print(TimWord word)
+        public virtual string Print()
         {
-            return _timPrinter.Print(word);
+            return _timPrinter.Print(_timWord);
         }
 
         public TimPrinter()

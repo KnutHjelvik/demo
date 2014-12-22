@@ -1,4 +1,5 @@
 ﻿using System;
+using Timpex.Kata.Advanced.ByWord;
 
 namespace Timpex.Kata.Advanced.ByCounter
 {

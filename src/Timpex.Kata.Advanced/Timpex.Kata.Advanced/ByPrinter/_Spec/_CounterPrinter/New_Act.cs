@@ -1,25 +1,24 @@
 ﻿using Rhino.Mocks;
+using Timpex.Kata.Advanced.ByConverter;
 using Timpex.Kata.Advanced.ByCounter;
 
-namespace Timpex.Kata.Advanced.ByPredicate._Spec._PexPredicate.New
+namespace Timpex.Kata.Advanced.ByPrinter._Spec._CounterPrinter
 {
-    abstract class Matches_Act : New_Act
+    abstract class New_Act : Base_Act
     {
+        protected CounterPrinter Sut;
+        protected TextConverter TextConverter = MockRepository.GenerateMock<TextConverter>();
         protected Counter Counter = MockRepository.GenerateMock<Counter>();
-        protected bool Expected = true;
-        protected bool Returned;
 
         protected override void Arrange()
         {
             base.Arrange();
             base.Act();
-            Counter.Stub(x => x.Count).Return(5);
-
         }
 
         protected override void Act()
         {
-            Returned = Sut.Matches(Counter);
+            Sut = new CounterPrinter(TextConverter);
         }
     }
 

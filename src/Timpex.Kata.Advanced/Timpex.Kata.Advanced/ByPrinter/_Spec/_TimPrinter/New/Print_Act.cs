@@ -17,7 +17,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimPrinter.New
 
         protected override void Act()
         {
-            Returned = Sut.Print(TimWord);
+            Returned = Sut.Print();
         }
     }
 

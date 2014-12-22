@@ -17,7 +17,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._PexPrinter.New
 
         protected override void Act()
         {
-            Returned = Sut.Print(PexWord);
+            Returned = Sut.Print();
         }
     }
 

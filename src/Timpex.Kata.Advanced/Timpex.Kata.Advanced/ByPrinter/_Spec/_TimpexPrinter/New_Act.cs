@@ -1,13 +1,20 @@
 ﻿using Rhino.Mocks;
-using Timpex.Kata.Advanced.ByWord;
+using Timpex.Kata.Advanced.ByCounter;
+using Timpex.Kata.Advanced.ByPredicate;
 
 namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimpexPrinter
 {
     abstract class New_Act : Base_Act
     {
-        protected TimpexPrinter Sut;
-        protected WordPrinterWrapper<TimpexWord> WordPrinterWrapper = MockRepository.GenerateMock<WordPrinterWrapper<TimpexWord>>();
-        protected TimpexWord TimWord = MockRepository.GenerateMock<TimpexWord>();
+
+        protected PredicateCore PexPredicate = MockRepository.GenerateMock<PexPredicate>();
+        protected PredicateCore TimPredicate = MockRepository.GenerateMock<TimPredicate>();
+        protected TimPrinter TimPrinter = MockRepository.GenerateMock<TimPrinter>();
+        protected PexPrinter PexPrinter = MockRepository.GenerateMock<PexPrinter>();
+        protected TimAndPexPrinter TimAndPexPrinter = MockRepository.GenerateMock<TimAndPexPrinter>();
+        protected Counter Counter = MockRepository.GenerateMock<Counter>();
+
+        protected TimpexPrinter Sut; 
 
         protected override void Arrange()
         {
@@ -17,7 +24,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimpexPrinter
 
         protected override void Act()
         {
-            Sut = new TimpexPrinter(WordPrinterWrapper);
+            Sut = new TimpexPrinter(PexPredicate,PexPrinter,TimAndPexPrinter,TimPredicate,TimPrinter);
         }
     }
 

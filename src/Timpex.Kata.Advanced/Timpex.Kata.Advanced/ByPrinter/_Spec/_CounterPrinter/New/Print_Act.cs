@@ -1,23 +1,25 @@
 ﻿using System;
 using Rhino.Mocks;
 
-namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimpexPrinter.New
+namespace Timpex.Kata.Advanced.ByPrinter._Spec._CounterPrinter.New
 {
     abstract class Print_Act : New_Act
     {
-        protected String Expected = "timpex";
+        protected String Expected = "2";
         protected String Returned;
 
         protected override void Arrange()
         {
             base.Arrange();
             base.Act();
-            WordPrinterWrapper.Stub(x => x.Print(TimWord)).Return("timpex");
+            Counter.Stub(x => x.Count).Return(2);
+            TextConverter.Stub(x => x.Convert(Counter)).Return("2");
+
         }
 
         protected override void Act()
         {
-            Returned = Sut.Print(TimWord);
+            Returned = Sut.Print(Counter);
         }
     }
 

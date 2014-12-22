@@ -6,7 +6,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimPrinter
     abstract class New_Act : Base_Act
     {
         protected TimPrinter Sut;
-        protected WordPrinterWrapper<TimWord> WordPrinterWrapper = MockRepository.GenerateMock<WordPrinterWrapper<TimWord>>();
+        protected WordPrinterWrapper<Word> WordPrinterWrapper = MockRepository.GenerateMock<WordPrinterWrapper<Word>>();
         protected TimWord TimWord = MockRepository.GenerateMock<TimWord>();
 
         protected override void Arrange()
@@ -17,7 +17,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimPrinter
 
         protected override void Act()
         {
-            Sut = new TimPrinter(WordPrinterWrapper);
+            Sut = new TimPrinter(TimWord,WordPrinterWrapper);
         }
     }
 

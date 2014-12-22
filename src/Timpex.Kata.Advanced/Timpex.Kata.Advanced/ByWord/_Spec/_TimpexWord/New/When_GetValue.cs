@@ -13,7 +13,7 @@ namespace Timpex.Kata.Advanced.ByWord._Spec._TimpexWord.New
         }
 
         [Test]
-        public void It_Should_Return_Tim()
+        public void It_Should_Return_Timpex()
         {
             Assert.AreEqual(Expected,Result);
         }

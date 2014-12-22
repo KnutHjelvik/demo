@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Timpex.Kata.Advanced.ByPredicate._Spec._PexPredicate.New
+namespace Timpex.Kata.Advanced.ByPredicate._Spec._TimPredicate.New.Matches
 {
     [TestFixture]
     class When_Matches:Matches_Act

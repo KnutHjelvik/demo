@@ -6,7 +6,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._PexPrinter
     abstract class New_Act : Base_Act
     {
         protected PexPrinter Sut;
-        protected WordPrinterWrapper<PexWord> WordPrinterWrapper = MockRepository.GenerateMock<WordPrinterWrapper<PexWord>>();
+        protected WordPrinterWrapper<Word> WordPrinterWrapper = MockRepository.GenerateMock<WordPrinterWrapper<Word>>();
         protected PexWord PexWord = MockRepository.GenerateMock<PexWord>();
 
         protected override void Arrange()
@@ -17,7 +17,7 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._PexPrinter
 
         protected override void Act()
         {
-            Sut = new PexPrinter(WordPrinterWrapper);
+            Sut = new PexPrinter(PexWord,WordPrinterWrapper);
         }
     }
 

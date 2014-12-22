@@ -1,12 +1,19 @@
-﻿using Timpex.Kata.Advanced.ByCounter;
+﻿using System;
+using Timpex.Kata.Advanced.ByCounter;
 
 namespace Timpex.Kata.Advanced.ByPredicate
 {
     public class TimPredicate:PredicateCore
     {
-        public bool Matches(Counter counter)
+        public static Func<TimPredicate> New = () => new TimPredicate();
+        
+        public virtual bool Matches(Counter counter)
         {
-            throw new System.NotImplementedException();
+            return counter.Count%3 == 0;
+        }
+
+        public TimPredicate()
+        {
         }
     }
 }

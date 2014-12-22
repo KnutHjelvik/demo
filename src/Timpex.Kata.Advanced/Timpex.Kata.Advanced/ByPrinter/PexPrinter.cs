@@ -1,20 +1,24 @@
-﻿using Timpex.Kata.Advanced.ByWord;
+﻿using System;
+using Timpex.Kata.Advanced.ByWord;
 
 namespace Timpex.Kata.Advanced.ByPrinter
 {
-    public class PexPrinter:Printer<PexWord>
+    public class PexPrinter
     {
-        private WordPrinterWrapper<PexWord> _pexPrinter = new WordPrinterWrapper<PexWord>();
+        private WordPrinterWrapper<Word> _timPrinter;
+        private Word _pexWord = PexWord.New();
 
-        public PexPrinter(WordPrinterWrapper<PexWord> pexPrinter)
+        public static Func<PexPrinter> New = () => new PexPrinter();
+
+        public PexPrinter(Word word,WordPrinterWrapper<Word> timPrinter)
         {
-            _pexPrinter = pexPrinter;
+            _timPrinter = timPrinter;
+            _pexWord = word;
         }
 
-
-        public string Print(PexWord word)
+        public virtual string Print()
         {
-            return _pexPrinter.Print(word);
+            return _timPrinter.Print(_pexWord);
         }
 
         public PexPrinter()

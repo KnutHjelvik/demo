@@ -1,10 +1,9 @@
 ﻿using NUnit.Framework;
 
-namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimpexPrinter.New
+namespace Timpex.Kata.Advanced.ByPredicate._Spec._PexPredicate.New.Matches
 {
-
     [TestFixture]
-    class When_Print:Print_Act
+    class When_Matches:Matches_Act
     {
         [TestFixtureSetUp]
         public void Setup()
@@ -13,12 +12,14 @@ namespace Timpex.Kata.Advanced.ByPrinter._Spec._TimpexPrinter.New
             Act();
         }
 
-
         [Test]
-        public void It_Should_Return_Timpex()
+        public void It_Should_Return_True()
         {
             Assert.AreEqual(Expected,Returned);
         }
+
+        
+ 
 
     }
 
