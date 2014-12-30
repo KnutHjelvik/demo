@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
-using Rhino.Mocks;
 
-namespace Timpex.Kata.Advanced._Spec._Timpex.New.PrintThird
+namespace Timpex.Kata.Advanced.ByAdvanced._AdvancedWordPrinter.New.ActualWord_AndAdditionalWord
 {
     [TestFixture]
     class When_Print:Print_Act
@@ -13,18 +12,11 @@ namespace Timpex.Kata.Advanced._Spec._Timpex.New.PrintThird
             Act();
         }
 
-
         [Test]
-        public void It_Should_Increment_Counter()
-        {
-            Counter.AssertWasCalled(x=>x.IncrementCount());
-        }
-
-        [Test]
-        public void It_Should_Return_Tim()
+        public void It_Should_Print_Actual_Word_And_Pex()
         {
             Assert.AreEqual(Expected,Returned);
-        }
+        } 
 
     }
 

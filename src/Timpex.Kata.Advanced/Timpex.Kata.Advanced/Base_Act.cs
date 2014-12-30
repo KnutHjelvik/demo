@@ -1,4 +1,6 @@
-﻿namespace Timpex.Kata.Advanced
+﻿using System;
+
+namespace Timpex.Kata.Advanced
 {
     public class Base_Act
     {

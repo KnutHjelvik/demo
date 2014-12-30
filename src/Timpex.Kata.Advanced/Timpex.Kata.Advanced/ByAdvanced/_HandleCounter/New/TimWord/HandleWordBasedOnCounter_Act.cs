@@ -1,11 +1,13 @@
-﻿using Rhino.Mocks;
+﻿using System;
+using Rhino.Mocks;
+using Timpex.Kata.Advanced.ByWord;
 
-namespace Timpex.Kata.Advanced.ByPredicate._Spec._TimpexPredicate.New.MatchesTim
+namespace Timpex.Kata.Advanced.ByAdvanced._HandleCounter.New.TimWord
 {
-    abstract class MatchesTim_Act : New_Act
+    abstract class HandleWordBasedOnCounter_Act : New_Act
     {
-        protected bool Expected = true;
-        protected bool Returned;
+        protected String Expected = "tim";
+        protected Word Returned;
 
         protected override void Arrange()
         {
@@ -14,11 +16,12 @@ namespace Timpex.Kata.Advanced.ByPredicate._Spec._TimpexPredicate.New.MatchesTim
             Counter.Stub(x => x.Count).Return(3);
             TimPredicate.Stub(x => x.Matches(Counter)).Return(true);
             PexPredicate.Stub(x => x.Matches(Counter)).Return(false);
+
         }
 
         protected override void Act()
         {
-            Returned = Sut.Matches(Counter);
+            Returned = Sut.HandleWordBasedOnCounter(Counter);
         }
     }
 

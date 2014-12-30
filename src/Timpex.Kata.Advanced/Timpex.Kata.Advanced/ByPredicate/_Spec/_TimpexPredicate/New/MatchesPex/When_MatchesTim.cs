@@ -4,7 +4,7 @@ using Timpex.Kata.Advanced.ByPredicate._Spec._TimpexPredicate.New.MatchesTim;
 namespace Timpex.Kata.Advanced.ByPredicate._Spec._TimpexPredicate.New.MatchesPex
 {
     [TestFixture]
-    class When_MatchesTim:MatchesPex_Act
+    class When_MatchesPex:MatchesPex_Act
     {
         [TestFixtureSetUp]
         public void Setup()

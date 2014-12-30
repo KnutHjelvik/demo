@@ -18,48 +18,12 @@ namespace Timpex.Kata.Advanced._Spec._Timpex.New.IntegrationTests
         [Test]
         public void It_Should_Print_Correct()
         {
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print()); 
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
-            Console.WriteLine(timpex.Print());
+            for (int i = 0; i < 400; i++)
+            {
+                Console.WriteLine(timpex.Print());
+            }
+            
+       
         }
 
          

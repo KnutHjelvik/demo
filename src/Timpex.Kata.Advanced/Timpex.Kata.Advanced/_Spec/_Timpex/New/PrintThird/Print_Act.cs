@@ -12,9 +12,9 @@ namespace Timpex.Kata.Advanced._Spec._Timpex.New.PrintThird
         {
             base.Arrange();
             base.Act();
-            Counter.Stub(x => x.Count).Return(1);
-            TimpexPredicate.Stub(x => x.Matches(Counter)).Return(false);
-            CounterPrinter.Stub(x => x.Print(Counter)).Return("3");
+            Counter.Stub(x => x.Count).Return(3);
+            TimpexPredicate.Stub(x => x.Matches(Counter)).Return(true);
+            TimpexPrinter.Stub(x => x.Print(Counter)).Return("tim");
         }
 
         protected override void Act()

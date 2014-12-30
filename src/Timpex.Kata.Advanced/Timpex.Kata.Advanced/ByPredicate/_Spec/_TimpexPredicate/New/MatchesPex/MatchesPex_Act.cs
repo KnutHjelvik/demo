@@ -4,7 +4,7 @@ namespace Timpex.Kata.Advanced.ByPredicate._Spec._TimpexPredicate.New.MatchesPex
 {
     abstract class MatchesPex_Act : New_Act
     {
-        protected bool Expected = false;
+        protected bool Expected = true;
         protected bool Returned;
 
         protected override void Arrange()
@@ -13,7 +13,7 @@ namespace Timpex.Kata.Advanced.ByPredicate._Spec._TimpexPredicate.New.MatchesPex
             base.Act();
             Counter.Stub(x => x.Count).Return(3);
             TimPredicate.Stub(x => x.Matches(Counter)).Return(true);
-            PexPredicate.Stub(x => x.Matches(Counter)).Return(false);
+            PexPredicate.Stub(x => x.Matches(Counter)).Return(true);
         }
 
         protected override void Act()
