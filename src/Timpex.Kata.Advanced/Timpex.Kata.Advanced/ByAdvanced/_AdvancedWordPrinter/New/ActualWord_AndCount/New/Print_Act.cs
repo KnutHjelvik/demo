@@ -1,7 +1,7 @@
 ﻿using Rhino.Mocks;
 using Timpex.Kata.Advanced.ByWord;
 
-namespace Timpex.Kata.Advanced.ByAdvanced._AdvancedWordPrinter.New.ActualWord_AndCount
+namespace Timpex.Kata.Advanced.ByAdvanced._AdvancedWordPrinter.New.ActualWord_AndCount.New
 {
     abstract class Print_Act : New_Act
     {

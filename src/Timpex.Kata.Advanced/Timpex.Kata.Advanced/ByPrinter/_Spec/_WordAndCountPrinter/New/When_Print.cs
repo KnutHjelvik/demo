@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Timpex.Kata.Advanced.ByAdvanced._AdvancedWordPrinter.New.ActualWord_AndCount
+namespace Timpex.Kata.Advanced.ByPrinter._Spec._WordAndCountPrinter.New
 {
     [TestFixture]
     class When_Print:Print_Act
@@ -13,7 +13,7 @@ namespace Timpex.Kata.Advanced.ByAdvanced._AdvancedWordPrinter.New.ActualWord_An
         }
 
         [Test]
-        public void It_Should_Print_Actual_Word_And_Count()
+        public void It_Should_Print_Word_And_Count()
         {
             Assert.AreEqual(Expected,Returned);
         } 

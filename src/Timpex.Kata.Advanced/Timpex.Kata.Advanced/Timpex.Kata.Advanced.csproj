@@ -47,11 +47,12 @@
   <ItemGroup>
     <Compile Include="Base_Act.cs" />
     <Compile Include="ByAdvanced\AdvancedWordPrinter.cs" />
-    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndCount\Print_Act.cs" />
-    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndCount\When_Print.cs" />
+    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndCount\New\Print_Act.cs" />
+    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndCount\New\When_Print.cs" />
     <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndAdditionalWord\Print_Act.cs" />
     <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndAdditionalWord\When_Print.cs" />
-    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New_Act.cs" />
+    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\ActualWord_AndCount\New_Act.cs" />
+    <Compile Include="ByAdvanced\_AdvancedWordPrinter\New\New_Act.cs" />
     <Compile Include="ByConverter\Converter.cs" />
     <Compile Include="ByConverter\_Spec\_TextConverter\New\Convert_Act.cs" />
     <Compile Include="ByConverter\_Spec\_TextConverter\New\When_Convert.cs" />
@@ -66,14 +67,6 @@
     <Compile Include="ByAdvanced\_HandleCounter\New\TimWord\When_HandleWordBasedOnCounter.cs" />
     <Compile Include="ByAdvanced\_HandleCounter\New\TimWord\HandleWordBasedOnCounter_Act.cs" />
     <Compile Include="ByAdvanced\_HandleCounter\New_Act.cs" />
-    <Compile Include="ByFactory\Factory.cs" />
-    <Compile Include="ByFactory\WordFactory.cs" />
-    <Compile Include="ByFactory\_Spec\_WordFactory\New\Create_Act.cs" />
-    <Compile Include="ByFactory\_Spec\_WordFactory\New\When_Create.cs" />
-    <Compile Include="ByFactory\_Spec\_WordFactory\New_Act.cs" />
-    <Compile Include="ByFactory\_Spec\_Factory\New\Create_Act.cs" />
-    <Compile Include="ByFactory\_Spec\_Factory\New\When_Create.cs" />
-    <Compile Include="ByFactory\_Spec\_Factory\New_Act.cs" />
     <Compile Include="ByPredicate\TimpexPredicate.cs" />
     <Compile Include="ByPredicate\PredicateCore.cs" />
     <Compile Include="ByPredicate\PexPredicate.cs" />
@@ -103,6 +96,11 @@
     <Compile Include="ByPrinter\TimAndPexPrinter.cs" />
     <Compile Include="ByPrinter\TimpexPrinter.cs" />
     <Compile Include="ByPrinter\TimPrinter.cs" />
+    <Compile Include="ByPrinter\WordAndCountPrinter.cs" />
+    <Compile Include="ByPrinter\_Spec\_WordAndCountPrinter\New\Print_Act.cs" />
+    <Compile Include="ByPrinter\_Spec\_WordAndCountPrinter\New\When_Print.cs" />
+    <Compile Include="ByPrinter\_Spec\_WordAndCountPrinter\New_Act.cs" />
+    <Compile Include="ByWord\WordConcatenating .cs" />
     <Compile Include="ByPrinter\WordPrinter.cs" />
     <Compile Include="ByPrinter\WordPrinterWrapper.cs" />
     <Compile Include="ByPrinter\_Spec\_CounterPrinter\New\Print_Act.cs" />
@@ -134,6 +132,9 @@
     <Compile Include="ByPrinter\_Spec\_WordPrinterWrapper\New\When_Print.cs" />
     <Compile Include="ByWord\PexWord.cs" />
     <Compile Include="ByWord\TimpexWord.cs" />
+    <Compile Include="ByWord\_Spec\_WordConcatenating\New\Concatinate_Act.cs" />
+    <Compile Include="ByWord\_Spec\_WordConcatenating\New\When_Concatinate.cs" />
+    <Compile Include="ByWord\_Spec\_WordConcatenating\New_Act.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ByWord\TimWord.cs" />
     <Compile Include="ByWord\Word.cs" />
