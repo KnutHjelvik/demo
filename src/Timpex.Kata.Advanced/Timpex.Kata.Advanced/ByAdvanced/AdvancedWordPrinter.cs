@@ -10,19 +10,18 @@ namespace Timpex.Kata.Advanced.ByAdvanced
 {
     public class AdvancedWordPrinter
     {
-        private HandleCounter _handleCounter = HandleCounter.New();
+        private HandlerBase _handlerBase = HandlerBase.New();
         private TimpexPredicate _timpexPredicate = TimpexPredicate.New();
         private WordAndCountPrinter _wordAndCountPrinter = WordAndCountPrinter.New();
-        
         private Word _resultWord;
         private Counter _counter;
 
         public static Func<AdvancedWordPrinter> New = () => new AdvancedWordPrinter();
 
-        public AdvancedWordPrinter(HandleCounter handleCounter, TimpexPredicate timpexPredicate,WordAndCountPrinter wordAndCountPrinter)
+        public AdvancedWordPrinter(HandlerBase handlerBase, TimpexPredicate timpexPredicate,WordAndCountPrinter wordAndCountPrinter)
         {
             _timpexPredicate = timpexPredicate;
-            _handleCounter = handleCounter;
+            _handlerBase = handlerBase;
             _wordAndCountPrinter = wordAndCountPrinter;
         }
 
@@ -39,7 +38,7 @@ namespace Timpex.Kata.Advanced.ByAdvanced
         {
             bool matching = _timpexPredicate.Matches(_counter);
             if (matching)
-                _resultWord = _handleCounter.HandleWordBasedOnCounter(_counter);
+                _resultWord = _handlerBase.HandleWordBasedOnCounter(_counter);
             return matching;
         }
 
