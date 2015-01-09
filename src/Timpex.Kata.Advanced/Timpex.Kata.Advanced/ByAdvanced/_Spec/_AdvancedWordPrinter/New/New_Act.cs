@@ -15,21 +15,18 @@ namespace Timpex.Kata.Advanced.ByAdvanced._Spec._AdvancedWordPrinter.New
         protected Word ActualWord = MockRepository.GenerateMock<TimWord>();
         protected WordAndCountPrinter WordAndCountPrinter = MockRepository.GenerateMock<WordAndCountPrinter>();
         protected Word PexWord = new PexWord();
+        protected SimpleWordPrinter SimpleWordPrinter = MockRepository.GenerateMock<SimpleWordPrinter>();
 
         protected override void Arrange()
         {
             base.Arrange();
             base.Act();
-            Counter.Stub(x => x.Count).Return(3);
-            TimpexPredicate.Stub(x => x.Matches(Counter)).Return(true);
-            HandlerBase.Stub(x => x.HandleWordBasedOnCounter(Counter)).Return(PexWord);
-            ActualWord.Stub(x => x.Value()).Return("tim");
-            WordAndCountPrinter.Stub(x => x.Print(Counter, ActualWord)).Return("tim 3");
+      
         }
 
         protected override void Act()
         {
-            Sut = new AdvancedWordPrinter(HandlerBase,TimpexPredicate,WordAndCountPrinter);
+            Sut = new AdvancedWordPrinter(HandlerBase,TimpexPredicate,WordAndCountPrinter,SimpleWordPrinter);
         }
     }
 

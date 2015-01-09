@@ -6,18 +6,18 @@ namespace Timpex.Kata.Advanced.ByPrinter
 {
     public class WordAndCountPrinter
     {
-        private WordConcatenating _wordConcatenating = WordConcatenating.New();
+        private CounterAndWordConcatenating _counterAndWordConcatenating = CounterAndWordConcatenating.New();
 
         public static Func<WordAndCountPrinter> New = () => new WordAndCountPrinter();
 
-        public WordAndCountPrinter(WordConcatenating wordConcatenating)
+        public WordAndCountPrinter(CounterAndWordConcatenating counterAndWordConcatenating)
         {
-            _wordConcatenating = wordConcatenating;
+            _counterAndWordConcatenating = counterAndWordConcatenating;
         }
 
         public virtual string Print(Counter counter, Word word)
         {
-            return _wordConcatenating.Concatinate(counter,word);
+            return _counterAndWordConcatenating.Concatinate(counter,word);
         }
 
         public WordAndCountPrinter()
