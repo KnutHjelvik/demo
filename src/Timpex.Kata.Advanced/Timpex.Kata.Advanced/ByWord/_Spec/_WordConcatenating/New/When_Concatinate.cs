@@ -3,7 +3,7 @@
 namespace Timpex.Kata.Advanced.ByWord._Spec._WordConcatenating.New
 {
     [TestFixture]
-    class When_Concatinate:Concatinate_Act      
+    class When_Concatinate:Concatinate_Act
     {
         [TestFixtureSetUp]
         public void Setup()
@@ -13,12 +13,10 @@ namespace Timpex.Kata.Advanced.ByWord._Spec._WordConcatenating.New
         }
 
         [Test]
-        public void It_Should_Concat_Word_And_Counter()
+        public void It_Should_Concat_Words()
         {
             Assert.AreEqual(Expected,Returned);
         }
-
-         
 
     }
 

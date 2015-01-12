@@ -13,12 +13,13 @@ namespace Timpex.Kata.Advanced.ByAdvanced
         private HandlerBase _handlerBase = HandlerBase.New();
         private TimpexPredicate _timpexPredicate = TimpexPredicate.New();
         private WordAndCountPrinter _wordAndCountPrinter = WordAndCountPrinter.New();
+        private SimpleWordPrinter _simpleWordPrinter = SimpleWordPrinter.New();
         private Word _resultWord;
         private Counter _counter;
 
         public static Func<AdvancedWordPrinter> New = () => new AdvancedWordPrinter();
 
-        public AdvancedWordPrinter(HandlerBase handlerBase, TimpexPredicate timpexPredicate,WordAndCountPrinter wordAndCountPrinter)
+        public AdvancedWordPrinter(HandlerBase handlerBase, TimpexPredicate timpexPredicate,WordAndCountPrinter wordAndCountPrinter,SimpleWordPrinter simpleWordPrinter)
         {
             _timpexPredicate = timpexPredicate;
             _handlerBase = handlerBase;
@@ -29,7 +30,7 @@ namespace Timpex.Kata.Advanced.ByAdvanced
         {
             _counter = counter;
             if (IsTimOrPex())
-                return actualWord.Value() + " " + _resultWord.Value();
+                return _simpleWordPrinter.Print(actualWord, _resultWord);
             return _wordAndCountPrinter.Print(_counter, actualWord);
         }
 

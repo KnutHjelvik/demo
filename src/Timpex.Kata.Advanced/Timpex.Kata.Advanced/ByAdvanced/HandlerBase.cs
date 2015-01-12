@@ -68,5 +68,7 @@ namespace Timpex.Kata.Advanced.ByAdvanced
         public HandlerBase()
         {
         }
+
+      
     }
 }

@@ -1,6 +1,4 @@
 ﻿using Rhino.Mocks;
-using Timpex.Kata.Advanced.ByConverter;
-using Timpex.Kata.Advanced.ByCounter;
 using Timpex.Kata.Advanced.ByPrinter;
 
 namespace Timpex.Kata.Advanced.ByWord._Spec._WordConcatenating
@@ -8,22 +6,20 @@ namespace Timpex.Kata.Advanced.ByWord._Spec._WordConcatenating
     abstract class New_Act : Base_Act
     {
         protected WordConcatenating Sut;
-        protected Counter Counter = MockRepository.GenerateMock<Counter>();
-        protected Word Word = MockRepository.GenerateMock<TimWord>();
-        protected TextConverter TextConverter = MockRepository.GenerateMock<TextConverter>();
+        protected WordStringTrimmer WordStringTrimmer = MockRepository.GenerateMock<WordStringTrimmer>();
 
         protected override void Arrange()
         {
             base.Arrange();
             base.Act();
-            TextConverter.Stub(x => x.Convert(Counter)).Return("3");
         }
 
         protected override void Act()
         {
-            Sut = new WordConcatenating(TextConverter);
+            Sut = new WordConcatenating();
         }
     }
+
 
 
 }
