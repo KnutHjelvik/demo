@@ -5,13 +5,13 @@ using Timpex.Kata.Advanced.ByWord;
 
 namespace Timpex.Kata.Advanced.ByPrinter
 {
-    public class WordConcatenating
+    public class CounterAndWordConcatenating
     {
         private TextConverter _textConverter = TextConverter.New();
 
-        public static Func<WordConcatenating> New = () => new WordConcatenating();
+        public static Func<CounterAndWordConcatenating> New = () => new CounterAndWordConcatenating();
 
-        public WordConcatenating(TextConverter textConverter)
+        public CounterAndWordConcatenating(TextConverter textConverter)
         {
             _textConverter = textConverter;
         }
@@ -23,7 +23,7 @@ namespace Timpex.Kata.Advanced.ByPrinter
             return wordValue + " " + convertedValue;
         }
 
-        public WordConcatenating()
+        public CounterAndWordConcatenating()
         {
         }
     }

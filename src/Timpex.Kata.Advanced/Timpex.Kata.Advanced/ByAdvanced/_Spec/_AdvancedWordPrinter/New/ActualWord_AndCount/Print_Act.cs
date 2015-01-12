@@ -1,7 +1,7 @@
 ﻿using Rhino.Mocks;
 using Timpex.Kata.Advanced.ByWord;
 
-namespace Timpex.Kata.Advanced.ByAdvanced._Spec._AdvancedWordPrinter.New.ActualWord_AndCount.New
+namespace Timpex.Kata.Advanced.ByAdvanced._Spec._AdvancedWordPrinter.New.ActualWord_AndCount
 {
     abstract class Print_Act : New_Act
     {
@@ -15,7 +15,9 @@ namespace Timpex.Kata.Advanced.ByAdvanced._Spec._AdvancedWordPrinter.New.ActualW
             base.Act();
             Counter.Stub(x => x.Count).Return(3);
             TimpexPredicate.Stub(x => x.Matches(Counter)).Return(false);
+            HandlerBase.Stub(x => x.HandleWordBasedOnCounter(Counter)).Return(PexWord);
             ActualWord.Stub(x => x.Value()).Return("tim");
+            WordAndCountPrinter.Stub(x => x.Print(Counter, ActualWord)).Return("tim 3");
         }
 
         protected override void Act()
