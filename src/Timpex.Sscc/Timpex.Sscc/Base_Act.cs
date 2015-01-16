@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Timpex.Kata.Advanced
+namespace Timpex.Sscc
 {
     public class Base_Act
     {
@@ -10,6 +10,16 @@ namespace Timpex.Kata.Advanced
 
         protected virtual void Act()
         {
+        }
+
+        protected void StubNew<TType>(ref Func<TType> original, TType instance)
+        {
+            new NewStubber<TType>(ref original, instance);
+        }
+
+        protected void StubManyNew<TType>(ref Func<TType> original, params TType[] instances)
+        {
+            new NewStubber<TType>(ref original, instances);
         }
     }
 }

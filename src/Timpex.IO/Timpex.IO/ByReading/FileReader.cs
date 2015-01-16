@@ -1,8 +1,11 @@
-﻿namespace Timpex.IO.ByReading
+﻿using System;
+
+namespace Timpex.IO.ByReading
 {
     public class FileReader
     {
         private FileImpl _fileImpl = new FileImpl();
+        public static Func<FileReader> New = () => new FileReader();
 
         public FileReader(FileImpl fileImpl)
         {

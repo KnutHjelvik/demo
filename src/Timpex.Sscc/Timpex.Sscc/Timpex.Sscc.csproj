@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.6.10205, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Timpex.IO\Timpex.IO\bin\Debug\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Timpex.IO\Timpex.IO\bin\Debug\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -37,10 +45,66 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Timpex.Core">
+      <HintPath>..\..\Timpex.Core\Timpex.Core\bin\Debug\Timpex.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Timpex.IO">
+      <HintPath>..\..\Timpex.IO\Timpex.IO\bin\Debug\Timpex.IO.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Base_Act.cs" />
+    <Compile Include="ByCode\Code.cs" />
+    <Compile Include="ByCode\CodeListWrapper.cs" />
+    <Compile Include="ByCode\CodeExcluder.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExcluder\New\Exclude_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExcluder\New\When_Exclude.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExcluder\New_Act.cs" />
+    <Compile Include="ByCode\_Spec\_Code\New\Value_Act.cs" />
+    <Compile Include="ByCode\_Spec\_Code\New\When_Value.cs" />
+    <Compile Include="ByCode\_Spec\_Code\New_Act.cs" />
+    <Compile Include="ByCode\_Spec\_ReadCodes\New\ReadAll_Act.cs" />
+    <Compile Include="ByCode\_Spec\_ReadCodes\New\When_ReadAll.cs" />
+    <Compile Include="ByCode\_Spec\_ReadCodes\New_Act.cs" />
+    <Compile Include="ByCode\CodeFactory.cs" />
+    <Compile Include="ByCode\CodelistFactory.cs" />
+    <Compile Include="ByCode\_Spec\_CodeFactory\New\CreateCode_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeFactory\New\When_CreateCode.cs" />
+    <Compile Include="ByCode\_Spec\_CodeFactory\New_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeListFactory\New\CreateCodeList_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeListFactory\New\When_CreateCodeList.cs" />
+    <Compile Include="ByCode\_Spec\_CodeListFactory\New_Act.cs" />
+    <Compile Include="ByPredicate\ApplicationIdentifierPredicate.cs" />
+    <Compile Include="ByPredicate\LengthOfCodePredicate.cs" />
+    <Compile Include="ByPredicate\EmptyPredicate.cs" />
+    <Compile Include="ByPredicate\SSCCPredicate.cs" />
+    <Compile Include="ByPredicate\_Spec\_ApplicationIdentifierPredicate\New\Match\Matches_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_ApplicationIdentifierPredicate\New\Match\When_Matches.cs" />
+    <Compile Include="ByPredicate\_Spec\_ApplicationIdentifierPredicate\New\NoMatch\Matches_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_ApplicationIdentifierPredicate\New\NoMatch\When_Matches.cs" />
+    <Compile Include="ByPredicate\_Spec\_ApplicationIdentifierPredicate\New_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_LengthOfCodePredicate\New\Matches\Matches_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_LengthOfCodePredicate\New\Matches\When_Matches.cs" />
+    <Compile Include="ByPredicate\_Spec\_LengthOfCodePredicate\New\NotMatches\Matches_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_LengthOfCodePredicate\New\NotMatches\When_Matches.cs" />
+    <Compile Include="ByPredicate\_Spec\_LengthOfCodePredicate\New_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_EmptyPredicate\New\NotEmpty\IsEmpty_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_EmptyPredicate\New\NotEmpty\When_IsEmpty.cs" />
+    <Compile Include="ByPredicate\_Spec\_EmptyPredicate\New\Empty\IsEmpty_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_EmptyPredicate\New\Empty\When_IsEmpty.cs" />
+    <Compile Include="ByPredicate\_Spec\_EmptyPredicate\New_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New\NotMatches\Matches_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New\NotMatches\When_Matches.cs" />
+    <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New\Matches\Matches_Act.cs" />
+    <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New\Matches\When_Matches.cs" />
+    <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New_Act.cs" />
+    <Compile Include="ByValidation\CodeValidator.cs" />
+    <Compile Include="NewStubber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ByCode\ReadCodesCore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ByValidation\_Spec\_CodeValidator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
