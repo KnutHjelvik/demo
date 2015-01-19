@@ -17,7 +17,7 @@ namespace Timpex.Sscc.ByCode
             _ssccPredicate = ssccPredicate;
         }
 
-        public List<Code> Exclude(List<Code> codeList)
+        public virtual List<Code> Exclude(List<Code> codeList)
         {
             foreach (Code code in codeList)
             {
