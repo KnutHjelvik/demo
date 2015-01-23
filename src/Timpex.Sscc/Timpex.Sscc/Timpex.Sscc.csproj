@@ -45,7 +45,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Timpex.Core">
+    <Reference Include="Timpex.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Timpex.Core\Timpex.Core\bin\Debug\Timpex.Core.dll</HintPath>
     </Reference>
     <Reference Include="Timpex.IO">
@@ -54,7 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_Act.cs" />
+    <Compile Include="ByDto\CodeDtoArrayCreater.cs" />
+    <Compile Include="ByDto\CodeDtoStringCreater.cs" />
+    <Compile Include="ByDto\CodeToDtoMapper.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoArrayCreater\New\Create_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoArrayCreater\New\When_Create.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoArrayCreater\New_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoStringCreater\New\Create_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoStringCreater\New\When_Create.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoStringCreater\New_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeToDtoMapper\New\Map_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeToDtoMapper\New\When_Map.cs" />
+    <Compile Include="ByDto\_Spec\_CodeToDtoMapper\New_Act.cs" />
     <Compile Include="ByCode\Code.cs" />
+    <Compile Include="ByCode\CodeExtracter.cs" />
     <Compile Include="ByCode\CodeListWrapper.cs" />
     <Compile Include="ByCode\CodeExcluder.cs" />
     <Compile Include="ByCode\CodeRepository.cs" />
@@ -64,9 +78,21 @@
     <Compile Include="ByCode\ExtractSupplier.cs" />
     <Compile Include="ByCode\ExtractSerialNumber.cs" />
     <Compile Include="ByCode\ReadAndExcludeCodes.cs" />
+    <Compile Include="ByCode\SpaceRemover.cs" />
     <Compile Include="ByCode\_Spec\_CodeExcluder\New\Exclude_Act.cs" />
     <Compile Include="ByCode\_Spec\_CodeExcluder\New\When_Exclude.cs" />
     <Compile Include="ByCode\_Spec\_CodeExcluder\New_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractApplicationIdentifier\ExtractApplicationIdentifier_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractApplicationIdentifier\When_ExtractApplicationIdentifier.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractIdentifier\ExtractIdentifier_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractIdentifier\When_ExtractIdentifier.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractSupplier\ExtractSupplier_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractSupplier\When_ExtractCountryCode.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractSerialNumber\ExtractSerialNumber_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractSerialNumber\When_ExtractSerialNumbe.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractCountryCode\ExtractCountryCode_Act.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New\_ExtractCountryCode\When_ExtractCountryCode.cs" />
+    <Compile Include="ByCode\_Spec\_CodeExtraction\New_Act.cs" />
     <Compile Include="ByCode\_Spec\_Code\New\Value_Act.cs" />
     <Compile Include="ByCode\_Spec\_Code\New\When_Value.cs" />
     <Compile Include="ByCode\_Spec\_Code\New_Act.cs" />
@@ -99,6 +125,16 @@
     <Compile Include="ByCode\_Spec\_CodeListFactory\New\CreateCodeList_Act.cs" />
     <Compile Include="ByCode\_Spec\_CodeListFactory\New\When_CreateCodeList.cs" />
     <Compile Include="ByCode\_Spec\_CodeListFactory\New_Act.cs" />
+    <Compile Include="ByCode\_Spec\_SpaceRemover\New\Remove_Act.cs" />
+    <Compile Include="ByCode\_Spec\_SpaceRemover\New\When_remove.cs" />
+    <Compile Include="ByCode\_Spec\_SpaceRemover\New_Act.cs" />
+    <Compile Include="ByIO\ResolveAndWrite.cs" />
+    <Compile Include="ByIO\_Spec\_CodeWriterCore\New\When_WriteCodes.cs" />
+    <Compile Include="ByIO\_Spec\_CodeWriterCore\New\WriteCodes_Act.cs" />
+    <Compile Include="ByIO\_Spec\_CodeWriterCore\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_ResolveAndWrite\New\Execute_Act.cs" />
+    <Compile Include="ByIO\_Spec\_ResolveAndWrite\New\When_Execute.cs" />
+    <Compile Include="ByIO\_Spec\_ResolveAndWrite\New_Act.cs" />
     <Compile Include="ByPredicate\ApplicationIdentifierPredicate.cs" />
     <Compile Include="ByPredicate\LengthOfCodePredicate.cs" />
     <Compile Include="ByPredicate\EmptyPredicate.cs" />
@@ -123,22 +159,56 @@
     <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New\Matches\Matches_Act.cs" />
     <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New\Matches\When_Matches.cs" />
     <Compile Include="ByPredicate\_Spec\_SSCCPredicate\New_Act.cs" />
-    <Compile Include="ByPresentation\CodePresentator.cs" />
+    <Compile Include="ByDto\DtoPresentator.cs" />
     <Compile Include="ByCode\ExtractApplicationIdentifier.cs" />
-    <Compile Include="ByPresentation\PresentableCode.cs" />
-    <Compile Include="ByPresentation\PresentableCodeFactory.cs" />
-    <Compile Include="ByValidation\CodeValidator.cs" />
+    <Compile Include="ByDto\CodeDto.cs" />
+    <Compile Include="ByDto\CodeDtoFactory.cs" />
+    <Compile Include="ByDto\_Spec\_DtoPresentator\New\Present_Act.cs" />
+    <Compile Include="ByDto\_Spec\_DtoPresentator\New\When_Present.cs" />
+    <Compile Include="ByDto\_Spec\_DtoPresentator\New_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoFactory\New\Create_Act.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoFactory\New\When_Create.cs" />
+    <Compile Include="ByDto\_Spec\_CodeDtoFactory\New_Act.cs" />
+    <Compile Include="ByIO\CodeWriterCore.cs" />
+    <Compile Include="ByIO\FileExtension.cs" />
+    <Compile Include="ByIO\FileEpoch.cs" />
+    <Compile Include="ByIO\FilenameGenerator.cs" />
+    <Compile Include="ByIO\FilenameConstructer.cs" />
+    <Compile Include="ByIO\FilePrefix.cs" />
+    <Compile Include="ByIO\Strings.cs" />
+    <Compile Include="ByIO\_Spec\_FileEpoch\New\Get_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FileEpoch\New\When_Get.cs" />
+    <Compile Include="ByIO\_Spec\_FileEpoch\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FileExtension\New\Get_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FileExtension\New\When_Get.cs" />
+    <Compile Include="ByIO\_Spec\_FileExtension\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameConstructer\New\Construct_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameConstructer\New\When_Construct.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameConstructer\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameContents\New\Get_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameContents\New\When_Get.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameContents\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameGenerator\New\Generate_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameGenerator\New\When_Generate.cs" />
+    <Compile Include="ByIO\_Spec\_FilenameGenerator\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilePrefix\New\Get_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FilePrefix\New\When_Get.cs" />
+    <Compile Include="ByIO\_Spec\_FilePrefix\New_Act.cs" />
     <Compile Include="NewStubber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ByCode\ReadCodesCore.cs" />
-    <Compile Include="PresentSSCC.cs" />
+    <Compile Include="ByCode\PresentSSCC.cs" />
+    <Compile Include="ByCode\_Spec\_PresentSSCC\Integration\Integration.cs" />
+    <Compile Include="ByCode\_Spec\_PresentSSCC\New\PresentCodes_Act.cs" />
+    <Compile Include="ByCode\_Spec\_PresentSSCC\New\When_PresentCodes.cs" />
+    <Compile Include="ByCode\_Spec\_PresentSSCC\New_Act.cs" />
+    <Compile Include="SSCC.cs" />
+    <Compile Include="_Spec\_SSCC\Integration\When_Integration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ByCode\_Spec\_ExtractCheckDigit\New\" />
-    <Folder Include="ByPresentation\_Spec\_CodePresentator\" />
-    <Folder Include="ByPresentation\_Spec\_PresentableCodeFactory\" />
-    <Folder Include="ByPresentation\_Spec\_PresentableCode\" />
-    <Folder Include="ByValidation\_Spec\_CodeValidator\" />
+    <Folder Include="ByDto\_Spec\_CodeDto\" />
+    <Folder Include="_Spec\_SSCC\New\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

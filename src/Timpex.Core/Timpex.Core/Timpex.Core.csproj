@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\tools\Nunit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\..\tools\Rhino\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,9 +45,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base_Act.cs" />
+    <Compile Include="ByDateTime\TodayGenerator.cs" />
+    <Compile Include="ByDateTime\TodayDateString.cs" />
+    <Compile Include="ByDateTime\AdvancedDateTimeConverter.cs" />
+    <Compile Include="ByDateTime\_Spec\_AdvancedDateTimeConverter\New\Convert_Act.cs" />
+    <Compile Include="ByDateTime\_Spec\_AdvancedDateTimeConverter\New\When_Convert.cs" />
+    <Compile Include="ByDateTime\_Spec\_AdvancedDateTimeConverter\New_Act.cs" />
+    <Compile Include="ByDateTime\_Spec\_TodayDateString\New\Get_Act.cs" />
+    <Compile Include="ByDateTime\_Spec\_TodayDateString\New\When_Get.cs" />
+    <Compile Include="ByDateTime\_Spec\_TodayDateString\New_Act.cs" />
+    <Compile Include="ByDateTime\_Spec\_TodayGenerator\New\Generate_Act.cs" />
+    <Compile Include="ByDateTime\_Spec\_TodayGenerator\New\When_Generate.cs" />
+    <Compile Include="ByDateTime\_Spec\_TodayGenerator\New_Act.cs" />
+    <Compile Include="ByStrings\Strings.cs" />
+    <Compile Include="ByStrings\_Spec\_Strings\New\Concat_Act.cs" />
+    <Compile Include="ByStrings\_Spec\_Strings\New\When_Concat.cs" />
+    <Compile Include="ByStrings\_Spec\_Strings\New_Act.cs" />
     <Compile Include="ISetup.cs" />
+    <Compile Include="NewStubber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

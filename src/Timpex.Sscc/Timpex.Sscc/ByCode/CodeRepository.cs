@@ -6,6 +6,10 @@ namespace Timpex.Sscc.ByCode
     {
         public static Func<CodeRepository> New = () => new CodeRepository();
 
-        public string Path = "C:\\SSCC.txt";
+        public virtual string GetLocation()
+        {
+            return "C:\\SSCC.txt";
+        }
+ 
     }
 }

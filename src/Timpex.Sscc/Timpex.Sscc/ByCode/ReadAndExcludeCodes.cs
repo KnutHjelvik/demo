@@ -19,7 +19,7 @@ namespace Timpex.Sscc.ByCode
             _codeExcluder = codeExcluder;
         }
 
-        public List<Code> Read(string path)
+        public virtual List<Code> Read(string path)
         {
             _path = path;
             ExecuteCore();

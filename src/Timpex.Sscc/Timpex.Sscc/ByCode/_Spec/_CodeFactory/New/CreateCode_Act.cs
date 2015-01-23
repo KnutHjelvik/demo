@@ -15,6 +15,7 @@ namespace Timpex.Sscc.ByCode._Spec._CodeFactory.New
             base.Arrange();
             base.Act();
             StubNew(ref Code.New, ExpectedInstance);
+            SpaceRemover.Stub(x => x.Remove(code)).Return(code);
 
         }
 

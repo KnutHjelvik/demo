@@ -1,5 +1,5 @@
 ﻿using Rhino.Mocks;
-using Timpex.IO.ByReading;
+using Timpex.IO.ByIO;
 
 namespace Timpex.Sscc.ByCode._Spec._ReadCodes
 {

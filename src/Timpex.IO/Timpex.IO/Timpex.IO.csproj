@@ -46,11 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_Act.cs" />
-    <Compile Include="ByReading\FileImpl.cs" />
-    <Compile Include="ByReading\FileReader.cs" />
-    <Compile Include="ByReading\_Spec\_FileReader\New\ReadAllLines_Act.cs" />
-    <Compile Include="ByReading\_Spec\_FileReader\New\When_ReadAllLines.cs" />
-    <Compile Include="ByReading\_Spec\_FileReader\New_Act.cs" />
+    <Compile Include="ByIO\FileImpl.cs" />
+    <Compile Include="ByIO\FileReader.cs" />
+    <Compile Include="ByIO\FileWriter.cs" />
+    <Compile Include="ByIO\WrappedStreamWriter.cs" />
+    <Compile Include="ByIO\_Spec\_FileWriter\New\WriteAllLines_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FileWriter\New\When_WriteAllLines.cs" />
+    <Compile Include="ByIO\_Spec\_FileWriter\New_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FileReader\New\ReadAllLines_Act.cs" />
+    <Compile Include="ByIO\_Spec\_FileReader\New\When_ReadAllLines.cs" />
+    <Compile Include="ByIO\_Spec\_FileReader\New_Act.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
