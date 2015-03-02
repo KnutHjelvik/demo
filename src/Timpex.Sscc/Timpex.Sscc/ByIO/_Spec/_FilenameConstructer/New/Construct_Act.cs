@@ -16,7 +16,7 @@ namespace Timpex.Sscc.ByIO._Spec._FilenameConstructer.New
             base.Act();
             FilePrefix.Stub(x => x.Get()).Return(Prefix);
             FileExtension.Stub(x => x.Get()).Return(Extension);
-            FileEpoch.Stub(x => x.Get()).Return(Contetnts);
+            CurrentDateString.Stub(x => x.Get()).Return(Contetnts);
         }
 
         protected override void Act()

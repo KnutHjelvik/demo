@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Timpex.Sscc.ByIO._Spec._FileEpoch.New
+namespace Timpex.Sscc.ByIO._Spec._CurrentDateString.New
 {
     [TestFixture]
     class When_Get:Get_Act

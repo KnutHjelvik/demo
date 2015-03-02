@@ -6,7 +6,7 @@ namespace Timpex.Sscc.ByDto._Spec._CodeDtoStringCreater
     abstract class New_Act : Base_Act
     {
         protected CodeDtoStringCreater Sut;
-        protected Strings Strings = MockRepository.GenerateMock<Strings>();
+        protected StringConstructer StringConstructer = MockRepository.GenerateMock<StringConstructer>();
 
         protected override void Arrange()
         {
@@ -16,7 +16,7 @@ namespace Timpex.Sscc.ByDto._Spec._CodeDtoStringCreater
 
         protected override void Act()
         {
-            Sut = new CodeDtoStringCreater(Strings);
+            Sut = new CodeDtoStringCreater(StringConstructer);
         }
     }
 

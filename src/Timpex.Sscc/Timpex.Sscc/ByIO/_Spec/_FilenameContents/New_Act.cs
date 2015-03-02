@@ -6,7 +6,7 @@ namespace Timpex.Sscc.ByIO._Spec._FilenameContents
     abstract class New_Act : Base_Act
     {
 
-        protected FileEpoch Sut;
+        protected CurrentDateString Sut;
         protected TodayDateString TodayDateString = MockRepository.GenerateMock<TodayDateString>();
 
         protected override void Arrange()
@@ -17,7 +17,7 @@ namespace Timpex.Sscc.ByIO._Spec._FilenameContents
 
         protected override void Act()
         {
-            Sut = new FileEpoch(TodayDateString);
+            Sut = new CurrentDateString(TodayDateString);
         }
     }
 

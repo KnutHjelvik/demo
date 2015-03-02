@@ -1,10 +1,10 @@
 ﻿using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace Timpex.Sscc.ByIO._Spec._ResolveAndWrite.New
+namespace Timpex.Sscc.ByIO._Spec._CodeWriter.New
 {
     [TestFixture]
-    class When_Execute:Execute_Act
+    class When_Write:Write_Act
     {
         [TestFixtureSetUp]
         public void Setup()

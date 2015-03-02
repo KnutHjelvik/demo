@@ -16,25 +16,20 @@ namespace Timpex.Sscc.ByDto._Spec._CodeDtoStringCreater.New
         private CodeDto Dto = MockRepository.GenerateMock<CodeDto>();
 
 
-        protected string Expected;
+        protected string Expected ="Result";
         protected string Returned;
 
-        private  void SetupExpected()
-        {
-           Expected = ApplicationIdentifier + NewLine + CountryCode + NewLine + Identifier +NewLine + Supplier + NewLine + Serial + NewLine;
-        }
 
         protected override void Arrange()
         {
             base.Arrange();
             base.Act();
-            SetupExpected();
-            Dto.Stub(x => x.CountryCode).Return(CountryCode);
             Dto.Stub(x => x.ApplicationIdentifier).Return(ApplicationIdentifier);
             Dto.Stub(x => x.Identifier).Return(Identifier);
-            Dto.Stub(x => x.Serial).Return(Serial);
             Dto.Stub(x => x.SupplierCode).Return(Supplier);
-            Strings.Stub(x => x.Concat(ApplicationIdentifier, Identifier, CountryCode, Supplier, Serial)).Return(Expected);
+            Dto.Stub(x => x.CountryCode).Return(CountryCode);
+            Dto.Stub(x => x.Serial).Return(Serial);
+            StringConstructer.Stub(x => x.Construct(ApplicationIdentifier, Identifier, CountryCode, Supplier, Serial)).Return(Expected);
         }
 
         protected override void Act()

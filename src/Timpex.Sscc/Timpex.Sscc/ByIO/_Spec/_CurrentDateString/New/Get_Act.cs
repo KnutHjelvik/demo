@@ -1,6 +1,6 @@
 ﻿using Rhino.Mocks;
 
-namespace Timpex.Sscc.ByIO._Spec._FileEpoch.New
+namespace Timpex.Sscc.ByIO._Spec._CurrentDateString.New
 {
     abstract class Get_Act : New_Act
     {

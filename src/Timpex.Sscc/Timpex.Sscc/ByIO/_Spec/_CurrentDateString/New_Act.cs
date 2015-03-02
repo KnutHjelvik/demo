@@ -1,12 +1,12 @@
 ﻿using Rhino.Mocks;
 using Timpex.Core.ByDateTime;
 
-namespace Timpex.Sscc.ByIO._Spec._FileEpoch
+namespace Timpex.Sscc.ByIO._Spec._CurrentDateString
 {
     abstract class New_Act : Base_Act
     {
 
-        protected FileEpoch Sut;
+        protected CurrentDateString Sut;
         protected TodayDateString TodayDateString = MockRepository.GenerateMock<TodayDateString>();
 
         protected override void Arrange()
@@ -17,7 +17,7 @@ namespace Timpex.Sscc.ByIO._Spec._FileEpoch
 
         protected override void Act()
         {
-            Sut = new FileEpoch(TodayDateString);
+            Sut = new CurrentDateString(TodayDateString);
         }
     }
 

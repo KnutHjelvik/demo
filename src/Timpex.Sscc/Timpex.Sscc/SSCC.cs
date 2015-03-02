@@ -6,18 +6,18 @@ namespace Timpex.Sscc
     public class SSCC
     {
         private PresentSSCC _sscc = PresentSSCC.New();
-        private ResolveAndWrite _resolveAndWrite = ResolveAndWrite.New();
+        private CodeWriter _codeWriter = CodeWriter.New();
 
-        public SSCC(PresentSSCC presentSscc, ResolveAndWrite resolveAndWrite)
+        public SSCC(PresentSSCC presentSscc, CodeWriter codeWriter)
         {
             _sscc = presentSscc;
-            _resolveAndWrite = resolveAndWrite;
+            _codeWriter = codeWriter;
         }
 
         public void Start()
         {
-            var dtos = _sscc.PresentCodes();
-            _resolveAndWrite.Execute(dtos);
+            var codes = _sscc.PresentCodes();
+            _codeWriter.Write(codes);
         }
 
         public SSCC()

@@ -3,13 +3,13 @@ using Timpex.Core.ByDateTime;
 
 namespace Timpex.Sscc.ByIO
 {
-    public class FileEpoch
+    public class CurrentDateString
     {
         private TodayDateString _todayDateString = TodayDateString.New();
 
-        public static Func<FileEpoch> New = () => new FileEpoch();
+        public static Func<CurrentDateString> New = () => new CurrentDateString();
 
-        public FileEpoch(TodayDateString todayDateString)
+        public CurrentDateString(TodayDateString todayDateString)
         {
             _todayDateString = todayDateString;
         }
@@ -20,7 +20,7 @@ namespace Timpex.Sscc.ByIO
         }
 
 
-        public FileEpoch()
+        public CurrentDateString()
         {
         }
     }

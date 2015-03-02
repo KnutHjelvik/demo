@@ -5,7 +5,7 @@ namespace Timpex.Sscc.ByIO._Spec._FilenameConstructer
     abstract class New_Act : Base_Act
     {
         protected FilenameConstructer Sut;
-        protected FileEpoch FileEpoch = MockRepository.GenerateMock<FileEpoch>();
+        protected CurrentDateString CurrentDateString = MockRepository.GenerateMock<CurrentDateString>();
         protected FilePrefix FilePrefix = MockRepository.GenerateMock<FilePrefix>();
         protected FileExtension FileExtension = MockRepository.GenerateMock<FileExtension>();
 
@@ -17,7 +17,7 @@ namespace Timpex.Sscc.ByIO._Spec._FilenameConstructer
 
         protected override void Act()
         {
-            Sut = new FilenameConstructer(FileExtension,FileEpoch,FilePrefix);
+            Sut = new FilenameConstructer(FileExtension,CurrentDateString,FilePrefix);
         }
     }
 

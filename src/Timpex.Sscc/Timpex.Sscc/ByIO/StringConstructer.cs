@@ -2,13 +2,13 @@
 
 namespace Timpex.Sscc.ByIO
 {
-    public class Strings
+    public class StringConstructer
     {
         private string _result;
 
-        public static Func<Strings> New = () => new Strings();
+        public static Func<StringConstructer> New = () => new StringConstructer();
 
-        public virtual string Concat(params string[] strings)
+        public virtual string Construct(params string[] strings)
         {
             foreach (var str in strings)
             {
@@ -17,7 +17,7 @@ namespace Timpex.Sscc.ByIO
             return _result;
         }
 
-        public Strings()
+        public StringConstructer()
         {
         }
     }

@@ -5,16 +5,16 @@ namespace Timpex.Sscc.ByIO
     public class FilenameConstructer
     {
         private FileExtension _fileExtension = FileExtension.New();
-        private FileEpoch _fileEpoch = FileEpoch.New();
+        private CurrentDateString _currentDateString = CurrentDateString.New();
         private FilePrefix _filePrefix = FilePrefix.New();
         private string _constructedResult;
 
         public static Func<FilenameConstructer> New = () => new FilenameConstructer();
 
-        public FilenameConstructer(FileExtension fileExtension,FileEpoch fileEpoch, FilePrefix filePrefix )
+        public FilenameConstructer(FileExtension fileExtension,CurrentDateString currentDateString, FilePrefix filePrefix )
         {
             _fileExtension = fileExtension;
-            _fileEpoch = fileEpoch;
+            _currentDateString = currentDateString;
             _filePrefix = filePrefix;
         }
 
@@ -27,7 +27,7 @@ namespace Timpex.Sscc.ByIO
         private void ConstructCore()
         {
             var prefix = _filePrefix.Get();
-            var filenamecontets = _fileEpoch.Get();
+            var filenamecontets = _currentDateString.Get();
             var extension = _fileExtension.Get();
             _constructedResult = prefix + filenamecontets + extension;
         }

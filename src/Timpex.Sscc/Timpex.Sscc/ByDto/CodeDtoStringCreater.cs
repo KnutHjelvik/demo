@@ -8,13 +8,13 @@ namespace Timpex.Sscc.ByDto
         private string _result;
         private CodeDto _codeDto;
         private string NewLine = Environment.NewLine;
-        private Strings _concater = Strings.New();
+        private StringConstructer _stringConstructer = StringConstructer.New();
 
         public static Func<CodeDtoStringCreater> New = () => new CodeDtoStringCreater();
 
-        public CodeDtoStringCreater(Strings concater)
+        public CodeDtoStringCreater(StringConstructer stringConstructer)
         {
-            _concater = concater;
+            _stringConstructer = stringConstructer;
         }
 
         public virtual string Create(CodeDto dto)
@@ -30,8 +30,8 @@ namespace Timpex.Sscc.ByDto
             var Identifier = "Identifier: " + _codeDto.Identifier + NewLine;
             var CountryCode = "CountryCode: " + _codeDto.CountryCode + NewLine;
             var Supplier = "Supplier: " + _codeDto.SupplierCode + NewLine;
-            var Serial = "Serial: " + _codeDto.Serial + NewLine;
-            _result = _concater.Concat(ApplicationIdentifier, Identifier, CountryCode, Supplier, Serial);
+            var Serial = "Serial: " + _codeDto.Serial + NewLine + NewLine;
+            _result = _stringConstructer.Construct(ApplicationIdentifier, Identifier, CountryCode, Supplier, Serial);
         }
 
         public CodeDtoStringCreater()

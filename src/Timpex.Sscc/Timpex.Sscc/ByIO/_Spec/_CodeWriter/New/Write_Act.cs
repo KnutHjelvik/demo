@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using NUnit.Framework;
 using Rhino.Mocks;
 using Timpex.Sscc.ByDto;
 
-namespace Timpex.Sscc.ByIO._Spec._ResolveAndWrite.New
+namespace Timpex.Sscc.ByIO._Spec._CodeWriter.New
 {
-    abstract class Execute_Act : New_Act
+    abstract class Write_Act : New_Act
     {
         protected string[] array = {};
         protected List<CodeDto> dtos = new List<CodeDto>();
@@ -21,7 +20,7 @@ namespace Timpex.Sscc.ByIO._Spec._ResolveAndWrite.New
 
         protected override void Act()
         {
-           Sut.Execute(dtos); 
+           Sut.Write(dtos); 
         }
     }
 
