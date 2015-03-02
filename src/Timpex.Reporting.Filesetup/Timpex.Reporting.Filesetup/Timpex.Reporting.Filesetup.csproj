@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{643A8128-54E7-45D0-8E82-67C1A97D0679}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Timpex.Reporting.Filesetup</RootNamespace>
+    <AssemblyName>Timpex.Reporting.Filesetup</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\Timpex.Core\Timpex.Core\bin\Debug\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\Timpex.Core\Timpex.Core\bin\Debug\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base_Act.cs" />
+    <Compile Include="ByCore\AcceptedPrefix.cs" />
+    <Compile Include="ByCore\Factory\AcceptedFilePrefixFactory.cs" />
+    <Compile Include="ByCore\Factory\AcceptedFileExtensionFactory.cs" />
+    <Compile Include="ByCore\CommandHandlerContainer.cs" />
+    <Compile Include="ByCore\Copier.cs" />
+    <Compile Include="ByCore\AcceptedExtensions.cs" />
+    <Compile Include="ByCore\ExtensionPredicate.cs" />
+    <Compile Include="ByCore\Factory\FileExtensionFactory.cs" />
+    <Compile Include="ByCore\Factory\FileInfoFactory.cs" />
+    <Compile Include="ByCore\Factory\FilenameFactory.cs" />
+    <Compile Include="ByCore\Factory\TransferInformationFactory.cs" />
+    <Compile Include="ByCore\Factory\_AcceptedFilePrefixFactory\New\Create_Act.cs" />
+    <Compile Include="ByCore\Factory\_AcceptedFilePrefixFactory\New\When_Create.cs" />
+    <Compile Include="ByCore\Factory\_AcceptedFilePrefixFactory\New_Act.cs" />
+    <Compile Include="ByCore\IO\ConsoleImpl.cs" />
+    <Compile Include="ByCore\IO\ProcessImpl.cs" />
+    <Compile Include="ByCore\Reading\Excluder\ExcludeFilesByPrefix.cs" />
+    <Compile Include="ByCore\Reading\Excluder\_Spec\_ExcludeFilesByPrefix\New\Exclude_Act.cs" />
+    <Compile Include="ByCore\Reading\Excluder\_Spec\_ExcludeFilesByPrefix\New\When_Exclude.cs" />
+    <Compile Include="ByCore\Reading\Excluder\_Spec\_ExcludeFilesByPrefix\New_Act.cs" />
+    <Compile Include="ByCore\StartPoint.cs" />
+    <Compile Include="ByCore\Factory\_AcceptedFileExtensionFactory\New\Create_Act.cs" />
+    <Compile Include="ByCore\Factory\_AcceptedFileExtensionFactory\New\When_Create.cs" />
+    <Compile Include="ByCore\Factory\_AcceptedFileExtensionFactory\New_Act.cs" />
+    <Compile Include="ByCore\FileTransferExecuter.cs" />
+    <Compile Include="ByCore\TransferInformation.cs" />
+    <Compile Include="ByCore\_Spec\_Copier\New\Copy_Act.cs" />
+    <Compile Include="ByCore\_Spec\_Copier\New\When_Copy.cs" />
+    <Compile Include="ByCore\_Spec\_Copier\New_Act.cs" />
+    <Compile Include="ByCore\_Spec\_Extensions\New\SetAcceptedExtensions_Act.cs" />
+    <Compile Include="ByCore\_Spec\_Extensions\New\When_SetAcceptedExtensions.cs" />
+    <Compile Include="ByCore\_Spec\_Extensions\New_Act.cs" />
+    <Compile Include="ByCore\Factory\_FileExtensionFactory\New\Create_Act.cs" />
+    <Compile Include="ByCore\Factory\_FileExtensionFactory\New\When_Create.cs" />
+    <Compile Include="ByCore\Factory\_FileExtensionFactory\New_Act.cs" />
+    <Compile Include="ByCore\Factory\_FileInfoFactory\New\Create_Act.cs" />
+    <Compile Include="ByCore\Factory\_FileInfoFactory\New\When_Create.cs" />
+    <Compile Include="ByCore\Factory\_FileInfoFactory\New_Act.cs" />
+    <Compile Include="ByCore\Factory\_FilenameFactory\New\Create_Act.cs" />
+    <Compile Include="ByCore\Factory\_FilenameFactory\New\When_Create.cs" />
+    <Compile Include="ByCore\Factory\_FilenameFactory\New_Act.cs" />
+    <Compile Include="ByCore\Folder\FolderSettings.cs" />
+    <Compile Include="ByCore\IO\DirectoryImpl.cs" />
+    <Compile Include="ByCore\IO\FileImpl.cs" />
+    <Compile Include="ByCore\IO\FileInformation.cs" />
+    <Compile Include="ByCore\IO\PathImpl.cs" />
+    <Compile Include="ByCore\Reading\Excluder\FileExcluder.cs" />
+    <Compile Include="ByCore\Reading\Excluder\_Spec\_FileExcluder\New\Exclude_Act.cs" />
+    <Compile Include="ByCore\Reading\Excluder\_Spec\_FileExcluder\New\When_Exclude.cs" />
+    <Compile Include="ByCore\Reading\Excluder\_Spec\_FileExcluder\New_Act.cs" />
+    <Compile Include="ByCore\Reading\FileReader.cs" />
+    <Compile Include="ByReporting\All\StartPointReporting.cs" />
+    <Compile Include="ByReporting\All\_Spec\New\Start_Act.cs" />
+    <Compile Include="ByReporting\All\_Spec\New\When_Start.cs" />
+    <Compile Include="ByReporting\All\_Spec\New_Act.cs" />
+    <Compile Include="ByReporting\DataSet\StartpointDataSet.cs" />
+    <Compile Include="ByReporting\DataSet\_Spec\New\Start_Act.cs" />
+    <Compile Include="ByReporting\DataSet\_Spec\New\When_Start.cs" />
+    <Compile Include="ByReporting\DataSet\_Spec\New_Act.cs" />
+    <Compile Include="ByReporting\DataSource\StartpointDataSource.cs" />
+    <Compile Include="ByReporting\DataSetModule.cs" />
+    <Compile Include="ByReporting\DataSourceModule.cs" />
+    <Compile Include="ByReporting\DataSource\_Spec\New\Start_Act.cs" />
+    <Compile Include="ByReporting\DataSource\_Spec\New\When_Start.cs" />
+    <Compile Include="ByReporting\DataSource\_Spec\New_Act.cs" />
+    <Compile Include="ByReporting\ReportingModule.cs" />
+    <Compile Include="ByReporting\ReportsEngModule.cs" />
+    <Compile Include="ByReporting\ReportsNorModule.cs" />
+    <Compile Include="ByReporting\Reports\Eng\StartpointReportsEng.cs" />
+    <Compile Include="ByReporting\Reports\Eng\_Spec\New\Start_Act.cs" />
+    <Compile Include="ByReporting\Reports\Eng\_Spec\New\When_Start.cs" />
+    <Compile Include="ByReporting\Reports\Eng\_Spec\New_Act.cs" />
+    <Compile Include="ByReporting\Reports\Nor\StartpointReports.cs" />
+    <Compile Include="ByCore\Reading\_Spec\_FileReader\New\Read_Act.cs" />
+    <Compile Include="ByCore\Reading\_Spec\_FileReader\New\When_Read.cs" />
+    <Compile Include="ByCore\Reading\_Spec\_FileReader\New_Act.cs" />
+    <Compile Include="ByReporting\Reports\Nor\_Spec\New\Start_Act.cs" />
+    <Compile Include="ByReporting\Reports\Nor\_Spec\New\When_Start.cs" />
+    <Compile Include="ByReporting\Reports\Nor\_Spec\New_Act.cs" />
+    <Compile Include="ByReporting\_Spec\_DataSetModule\New_Act.cs" />
+    <Compile Include="ByReporting\_Spec\_DataSetModule\When_New.cs" />
+    <Compile Include="ByReporting\_Spec\_DataSourceModule\New_Act.cs" />
+    <Compile Include="ByReporting\_Spec\_DataSourceModule\When_New.cs" />
+    <Compile Include="ByReporting\_Spec\_ReportingModule\New_Act.cs" />
+    <Compile Include="ByReporting\_Spec\_ReportingModule\When_New.cs" />
+    <Compile Include="ByReporting\_Spec\_ReportsEngModule\New_Act.cs" />
+    <Compile Include="ByReporting\_Spec\_ReportsEngModule\When_New.cs" />
+    <Compile Include="ByReporting\_Spec\_ReportsNorModule\New_Act.cs" />
+    <Compile Include="ByReporting\_Spec\_ReportsNorModule\When_New.cs" />
+    <Compile Include="BySSIS\BatchModule.cs" />
+    <Compile Include="BySSIS\Batch\StartpointSSISBatch.cs" />
+    <Compile Include="BySSIS\Batch\_Spec\New\Start_Act.cs" />
+    <Compile Include="BySSIS\Batch\_Spec\New\When_Start.cs" />
+    <Compile Include="BySSIS\Batch\_Spec\New_Act.cs" />
+    <Compile Include="NewStubber.cs" />
+    <Compile Include="TimpexReportingBuild.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Spec\Integration\When_Integration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BySSIS\IntegrationPacks\_Spec\New\" />
+    <Folder Include="BySSIS\_Spec\New\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
