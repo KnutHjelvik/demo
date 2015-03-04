@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using Rhino.Mocks;
 using Timpex.Reporting.Filesetup.ByReporting.DataSource;
-using Timpex.Reporting.Filesetup.ByReporting.Reports.Nor;
 
 namespace Timpex.Reporting.Filesetup.ByReporting._Spec._DataSourceModule
 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace Timpex.Reporting.Filesetup.ByCore
 {
@@ -12,7 +13,7 @@ namespace Timpex.Reporting.Filesetup.ByCore
 
         public virtual void RegisterStartpoint<TStartpoint>(string command) where TStartpoint : StartPoint
         {
-            if (!Dictionary.ContainsKey(command))
+            if (!Dictionary.ContainsKey(command) && !TypeDictionary.ContainsKey(typeof(TStartpoint)))
             {
                 Dictionary.Add(command, typeof (TStartpoint));
                 TypeDictionary.Add(typeof (TStartpoint), typeof (TStartpoint));
@@ -21,6 +22,8 @@ namespace Timpex.Reporting.Filesetup.ByCore
 
         public virtual StartPoint ResolveFor(string command)
         {
+            if (!Dictionary.ContainsKey(command))
+                return null;
             var startpoint = Dictionary[command];
             return (StartPoint)Activator.CreateInstance(startpoint);
         }

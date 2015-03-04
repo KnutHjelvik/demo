@@ -35,8 +35,20 @@ namespace Timpex.Reporting.Filesetup.ByReporting.All._Spec.New
         public void It_Should_Start_ReportsEng_Startpoint()
         {
             StartPointReportsEng.AssertWasCalled(x => x.Start());
-        } 
+        }
 
+        [Test]
+        public void It_Should_Start_ReportsEngUtv_Startpoint()
+        {
+            StartPointReportsEngUtv.AssertWasCalled(x => x.Start());
+        }
+
+
+        [Test]
+        public void It_Should_Start_ReportsNorUtv_Startpoint()
+        {
+            StartpointReportsUtv.AssertWasCalled(x => x.Start());
+        } 
     }
 
 }

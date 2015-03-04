@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using Rhino.Mocks;
-using Timpex.Reporting.Filesetup.ByReporting.Reports.Nor;
+using Timpex.Reporting.Filesetup.ByReporting.Reports.Std.Nor;
 
 namespace Timpex.Reporting.Filesetup.ByReporting._Spec._ReportsNorModule
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 using Timpex.Reporting.Filesetup.ByCore;
-using Timpex.Reporting.Filesetup.ByReporting.Reports.Nor;
+using Timpex.Reporting.Filesetup.ByReporting.Reports.Std.Nor;
 
 namespace Timpex.Reporting.Filesetup.ByReporting
 {

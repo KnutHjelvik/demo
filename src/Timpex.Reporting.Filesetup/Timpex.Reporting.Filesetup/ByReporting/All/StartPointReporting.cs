@@ -2,8 +2,10 @@
 using Timpex.Reporting.Filesetup.ByCore;
 using Timpex.Reporting.Filesetup.ByReporting.DataSet;
 using Timpex.Reporting.Filesetup.ByReporting.DataSource;
-using Timpex.Reporting.Filesetup.ByReporting.Reports.Eng;
-using Timpex.Reporting.Filesetup.ByReporting.Reports.Nor;
+using Timpex.Reporting.Filesetup.ByReporting.Reports.Std.Eng;
+using Timpex.Reporting.Filesetup.ByReporting.Reports.Std.Nor;
+using Timpex.Reporting.Filesetup.ByReporting.Reports.Utv.Eng;
+using Timpex.Reporting.Filesetup.ByReporting.Reports.Utv.Nor;
 
 namespace Timpex.Reporting.Filesetup.ByReporting.All
 {
@@ -13,6 +15,8 @@ namespace Timpex.Reporting.Filesetup.ByReporting.All
         private StartPoint _startpointDataSource = StartpointDataSource.New();
         private StartPoint _startpointReports = StartpointReports.New();
         private StartPoint _startpointReportsEng = StartpointReportsEng.New();
+        private StartPoint _startpointReportsEngUtv = StartpointReportsEngUtv.New();
+        private StartPoint _startpointReportsNorUtv = StartpointReportsUtv.New();
 
         private CommandHandlerContainer _commandHandlerContainer =  CommandHandlerContainer.New();
 
@@ -36,6 +40,8 @@ namespace Timpex.Reporting.Filesetup.ByReporting.All
             _startpointDataSource.Start();
             _startpointReports.Start();
             _startpointReportsEng.Start();
+            _startpointReportsEngUtv.Start();
+            _startpointReportsNorUtv.Start();
         }
 
         private void Init()
@@ -44,6 +50,8 @@ namespace Timpex.Reporting.Filesetup.ByReporting.All
             _startpointDataSource = _commandHandlerContainer.Resolve<StartpointDataSource>();
             _startpointReports = _commandHandlerContainer.Resolve<StartpointReports>();
             _startpointReportsEng = _commandHandlerContainer.Resolve<StartpointReportsEng>();
+            _startpointReportsEngUtv = _commandHandlerContainer.Resolve<StartpointReportsEngUtv>();
+            _startpointReportsNorUtv = _commandHandlerContainer.Resolve<StartpointReportsUtv>();
         }
 
         private void Resolve()
@@ -52,6 +60,8 @@ namespace Timpex.Reporting.Filesetup.ByReporting.All
             DataSourceModule.New();
             ReportsNorModule.New();
             ReportsEngModule.New();
+            ReportsNorUtvModule.New();
+            ReportsEngUtvModule.New();
         }
 
         public StartPointReporting()

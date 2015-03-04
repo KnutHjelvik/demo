@@ -7,7 +7,7 @@ namespace Timpex.Reporting.Filesetup.ByReporting
     public class ReportingModule
     {
         private CommandHandlerContainer _commandHandlerContainer = CommandHandlerContainer.New();
-        private string Command = "build_reporting";
+        private string Command = "reporting";
 
         public static Func<ReportingModule> New = () => new ReportingModule();
 

@@ -3,9 +3,8 @@ using Timpex.Reporting.Filesetup.ByCore;
 using Timpex.Reporting.Filesetup.ByCore.Factory;
 using Timpex.Reporting.Filesetup.ByCore.Folder;
 using Timpex.Reporting.Filesetup.ByCore.IO;
-using Timpex.Reporting.Filesetup.ByReporting.Reports.Nor;
 
-namespace Timpex.Reporting.Filesetup.BySSIS.Batch._Spec
+namespace Timpex.Reporting.Filesetup.BySsis.Batch._Spec
 {
     abstract class New_Act : Base_Act
     {

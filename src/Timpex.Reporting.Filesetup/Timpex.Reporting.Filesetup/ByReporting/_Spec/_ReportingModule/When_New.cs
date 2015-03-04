@@ -17,7 +17,7 @@ namespace Timpex.Reporting.Filesetup.ByReporting._Spec._ReportingModule
         [Test]
         public void It_Should_Register_Module()
         {
-            CommandHandlerContainer.AssertWasCalled(x=>x.RegisterStartpoint<StartPointReporting>("build_reporting"));
+            CommandHandlerContainer.AssertWasCalled(x=>x.RegisterStartpoint<StartPointReporting>("reporting"));
         }
 
     }

@@ -2,7 +2,7 @@
 using Rhino.Mocks;
 using Timpex.Reporting.Filesetup.ByCore;
 
-namespace Timpex.Reporting.Filesetup.BySSIS.Batch._Spec.New
+namespace Timpex.Reporting.Filesetup.BySsis.Batch._Spec.New
 {
     [TestFixture]
     class When_Start:Start_Act

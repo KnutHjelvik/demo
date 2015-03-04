@@ -4,7 +4,7 @@ using Timpex.Reporting.Filesetup.ByCore.Factory;
 using Timpex.Reporting.Filesetup.ByCore.Folder;
 using Timpex.Reporting.Filesetup.ByCore.IO;
 
-namespace Timpex.Reporting.Filesetup.BySSIS.Batch
+namespace Timpex.Reporting.Filesetup.BySsis.Batch
 {
     public class StartpointSSISBatch:StartPoint
     {
@@ -26,7 +26,7 @@ namespace Timpex.Reporting.Filesetup.BySSIS.Batch
 
         }
 
-        public void Start()
+        public virtual void Start()
         {
             var sourceDir = _folderSettings.GetSsis();
             var destination = _directoryImpl.CreateSsisDirectory();

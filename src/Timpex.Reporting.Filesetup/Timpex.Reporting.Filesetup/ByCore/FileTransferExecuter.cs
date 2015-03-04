@@ -16,6 +16,7 @@ namespace Timpex.Reporting.Filesetup.ByCore
         {
             _readAndExclude = fileExcluder;
             _copier = copier;
+            _consoleImpl = consoleImpl;
         }
 
         public virtual void Execute(TransferInformation transferInformation, AcceptedExtensions acceptedExtensions,AcceptedPrefix acceptedPrefix)

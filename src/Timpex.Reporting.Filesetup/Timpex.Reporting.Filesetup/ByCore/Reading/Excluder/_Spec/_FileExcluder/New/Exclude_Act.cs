@@ -32,12 +32,12 @@ namespace Timpex.Reporting.Filesetup.ByCore.Reading.Excluder._Spec._FileExcluder
             AcceptedExtensions.Stub(x => x.Get(FileInformation1.Extension)).Return(FileInformation1.Extension);
             AcceptedExtensions.Stub(x => x.Get(FileInformation2.Extension)).Return(null);
             AcceptedExtensions.Stub(x => x.Get(FileInformation3.Extension)).Return(FileInformation3.Extension);
-            Excluder.Stub(x => x.Exclude(Expected, AcceptedPrefix)).Return(Expected);
+            Excluder.Stub(x => x.Exclude(FilesRead, AcceptedPrefix)).Return(Expected);
         }
 
         protected override void Act()
         {
-            Returned = Sut.ReadAndExclude(AcceptedExtensions,null,Path);
+            Returned = Sut.ReadAndExclude(AcceptedExtensions,AcceptedPrefix,Path);
         }
     }
 

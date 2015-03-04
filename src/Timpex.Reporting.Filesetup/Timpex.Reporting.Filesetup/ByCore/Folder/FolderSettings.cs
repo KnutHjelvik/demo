@@ -26,9 +26,29 @@ namespace Timpex.Reporting.Filesetup.ByCore.Folder
             return get("C:/devel/Timpex/reporting/Reports/TimpexRapporter/");
         }
 
+        public virtual string GetDeploymentScripts()
+        {
+            return get("C:/devel/Timpex/reporting/Scripts/Report deployment script/");
+        }
+
         public virtual string GetDatasources()
         {
             return get("C:/devel/Timpex/reporting/Reports/TimpexRapporter/");
+        }
+
+        public virtual string GetSqlBatch()
+        {
+            return get("C:/devel/Timpex/reporting/SQL/SQL Update Script/CMD/");
+        }
+
+        public virtual string GetSqlMaster()
+        {
+            return get("C:/devel/Timpex/reporting/SQL/SQL Update Script/Reporting.Master/");
+        }
+
+        public virtual string GetSqlUpdates()
+        {
+            return get("C:/devel/Timpex/reporting/SQL/SQL Update Script/Reporting.Updates/");
         }
 
         private string get(string folder)
