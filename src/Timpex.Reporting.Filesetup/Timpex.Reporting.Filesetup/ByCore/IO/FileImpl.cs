@@ -17,6 +17,12 @@ namespace Timpex.Reporting.Filesetup.ByCore.IO
             return File.ReadAllBytes(source);
         }
 
+        public virtual void Remove(string path)
+        {
+            if(File.Exists(path))
+                File.Delete(path);
+        }
+
         public virtual void Write(string destination,byte[] bytes)
         {
             File.WriteAllBytes(destination,bytes);

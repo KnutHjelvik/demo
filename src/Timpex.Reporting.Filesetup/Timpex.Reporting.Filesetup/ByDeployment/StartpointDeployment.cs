@@ -3,7 +3,6 @@ using Timpex.Reporting.Filesetup.ByCore;
 using Timpex.Reporting.Filesetup.ByCore.Factory;
 using Timpex.Reporting.Filesetup.ByCore.Folder;
 using Timpex.Reporting.Filesetup.ByCore.IO;
-using Timpex.Reporting.Filesetup.BySsis.Batch;
 
 namespace Timpex.Reporting.Filesetup.ByDeployment
 {

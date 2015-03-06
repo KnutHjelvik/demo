@@ -11,6 +11,7 @@ namespace Timpex.Reporting.Filesetup.BySsis.All
         private CommandHandlerContainer _commandHandlerContainer = CommandHandlerContainer.New();
         private StartPoint _startpointSsisBatch;
         private StartPoint _startpointIntegrationPacks;
+        private StartPoint _startpointCompression;
 
         public StartpointSsis(CommandHandlerContainer commandHandlerContainer)
         {
@@ -19,7 +20,6 @@ namespace Timpex.Reporting.Filesetup.BySsis.All
 
         public void Start()
         {
-            Init();
             Resolve();
             StartAll();
         }
@@ -28,20 +28,16 @@ namespace Timpex.Reporting.Filesetup.BySsis.All
         {
             _startpointIntegrationPacks.Start();
             _startpointSsisBatch.Start();
+            _startpointCompression.Start();
         }
 
         private void Resolve()
         {
             _startpointIntegrationPacks = _commandHandlerContainer.Resolve<StartpointIntegrationPacks>();
             _startpointSsisBatch = _commandHandlerContainer.Resolve<StartpointSSISBatch>();
+            _startpointCompression = _commandHandlerContainer.Resolve<StartpointCompression>();
         }
 
-
-        private void Init()
-        {
-            //BatchModule.New();
-            //IntegrationPacksModule.New();
-        }
 
         public StartpointSsis()
         {

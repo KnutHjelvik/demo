@@ -21,6 +21,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints
         private StartPoint _startpointSql;
         private StartPoint _startpointDeployment;
         private StartPoint _startpointReportsEngUtv;
+        private StartPoint _startpointCompression;
 
         public StartpointEnglishExtended(CommandHandlerContainer commandHandlerContainer)
         {
@@ -42,6 +43,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints
             _startpointSql.Start();
             _startpointDeployment.Start();
             _startpointReportsEngUtv.Start();
+            _startpointCompression.Start();
         }
 
         private void Resolve()
@@ -53,6 +55,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints
             _startpointSql = _commandHandlerContainer.Resolve<StartpointSql>();
             _startpointDeployment = _commandHandlerContainer.Resolve<StartpointDeployment>();
             _startpointReportsEngUtv = _commandHandlerContainer.Resolve<StartpointReportsEngUtv>();
+            _startpointCompression = _commandHandlerContainer.Resolve<StartpointCompression>();
         }
 
         public StartpointEnglishExtended()

@@ -20,6 +20,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints._Spec._StartpointNorwegianS
         protected StartpointSql StartpointSql = MockRepository.GenerateMock<StartpointSql>();
         protected StartpointDeployment StartpointDeployment = MockRepository.GenerateMock<StartpointDeployment>();
         protected StartpointReports StartpointReports = MockRepository.GenerateMock<StartpointReports>();
+        protected StartpointCompression StartpointCompression = MockRepository.GenerateMock<StartpointCompression>();
 
         protected override void Arrange()
         {
@@ -33,6 +34,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints._Spec._StartpointNorwegianS
             CommandHandlerContainer.Stub(x => x.Resolve<StartpointSql>()).Return(StartpointSql);
             CommandHandlerContainer.Stub(x => x.Resolve<StartpointDeployment>()).Return(StartpointDeployment);
             CommandHandlerContainer.Stub(x => x.Resolve<StartpointReportsEngUtv>()).Return(StartpointReports);
+            CommandHandlerContainer.Stub(x => x.Resolve<StartpointCompression>()).Return(StartpointCompression);
         }
 
         protected override void Act()

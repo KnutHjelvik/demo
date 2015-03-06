@@ -27,6 +27,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints
         private StartPoint _startpointDeployment;
         private StartPoint _startpointReportsEngUtv;
         private StartPoint _startpointReportsUtv;
+        private StartPoint _startpointCompression;
 
         public StartpointAll(CommandHandlerContainer commandHandlerContainer)
         {
@@ -51,6 +52,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints
             _startpointDeployment.Start();
             _startpointReportsEngUtv.Start();
             _startpointReportsUtv.Start();
+            _startpointCompression.Start();
         }
 
         private void Resolve()
@@ -65,6 +67,7 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints
             _startpointDeployment = _commandHandlerContainer.Resolve<StartpointDeployment>();
             _startpointReportsEngUtv = _commandHandlerContainer.Resolve<StartpointReportsEngUtv>();
             _startpointReportsUtv = _commandHandlerContainer.Resolve<StartpointReportsUtv>();
+            _startpointCompression = _commandHandlerContainer.Resolve<StartpointCompression>();
         }
 
         public StartpointAll()

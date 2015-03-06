@@ -71,6 +71,12 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints._Spec._StartpointAll.New
         public void It_Should_Start_Reports_Nor_Startpoint()
         {
             StartpointReports.AssertWasCalled(x => x.Start());
+        }
+
+        [Test]
+        public void It_Should_Start_Compression_Startpoint()
+        {
+            StartpointReports.AssertWasCalled(x => x.Start());
         } 
     }
 

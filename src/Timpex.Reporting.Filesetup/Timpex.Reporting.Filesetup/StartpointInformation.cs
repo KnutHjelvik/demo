@@ -24,10 +24,10 @@ namespace Timpex.Reporting.Filesetup
             _consoleImpl.Info("       reports_eng_utv  [Copies english extended and standard reports]");
             _consoleImpl.Info("       reports_nor  [Copies norwegian standard reports]");
             _consoleImpl.Info("       reports_eng  [Copies english standard reports]");
-            _consoleImpl.Info("       nor_std  [Creates a complete package with norwegian standard reports]");
-            _consoleImpl.Info("       nor_utv  [Creates a complete package with norwegian extended reports]");
-            _consoleImpl.Info("       eng_std  [Creates a complete package with english standard reports]");
-            _consoleImpl.Info("       eng_utv  [Creates a complete package with english extended reports]");
+            _consoleImpl.Info("       nor_std  [Creates a complete package with norwegian standard reports and compresses it]");
+            _consoleImpl.Info("       nor_utv  [Creates a complete package with norwegian extended reports and compresses it]");
+            _consoleImpl.Info("       eng_std  [Creates a complete package with english standard reports and compresses it]");
+            _consoleImpl.Info("       eng_utv  [Creates a complete package with english extended reports and compresses it]");
             _consoleImpl.Info("       ssis  [Creates a complete package with all ssis files]");
             _consoleImpl.Info("       reporting  [copies all reports]");
             _consoleImpl.Info("       all  [Creates a complete package]");

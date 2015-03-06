@@ -1,6 +1,5 @@
 ﻿using System;
 using Timpex.Reporting.Filesetup.All.Modules;
-using Timpex.Reporting.Filesetup.ByCore;
 using Timpex.Reporting.Filesetup.ByDeployment;
 using Timpex.Reporting.Filesetup.ByReporting;
 using Timpex.Reporting.Filesetup.BySql;
@@ -10,25 +9,13 @@ namespace Timpex.Reporting.Filesetup
 {
     class TimpexReportingBuild
     {
-        private static CommandHandlerContainer _commandHandler = CommandHandlerContainer.New();
+        private static EntryPoint entryPoint = EntryPoint.New();
 
         static void Main(string[] args)
         {
             InitSubs();
             Init();
-            var command = String.Empty;
-            if (args.Length <= 0)
-            {
-                var startpoint = _commandHandler.ResolveFor(command);
-                startpoint.Start();
-            }
-            else
-            {
-                command = args[0];
-                var startPoint = _commandHandler.ResolveFor(command);
-                if (startPoint != null)
-                    startPoint.Start();
-            }
+            entryPoint.Start(args);
         }
 
 
@@ -56,6 +43,7 @@ namespace Timpex.Reporting.Filesetup
             DeploymentModule.New();
             SqlModule.New();
             InformationModule.New();
+            ZipModule.New();
         }
     }
 }

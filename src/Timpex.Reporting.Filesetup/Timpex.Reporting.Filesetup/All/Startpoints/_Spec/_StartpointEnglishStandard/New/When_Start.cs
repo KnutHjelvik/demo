@@ -53,6 +53,11 @@ namespace Timpex.Reporting.Filesetup.All.Startpoints._Spec._StartpointEnglishSta
         public void It_Should_Start_Reports_Startpoint()
         {
             StartpointReportsEng.AssertWasCalled(x => x.Start());
+        }
+
+        public void It_Should_Start_Compression_Startpoint()
+        {
+            StartpointCompression.AssertWasCalled(x => x.Start());
         } 
 
 

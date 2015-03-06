@@ -65,25 +65,25 @@ namespace Timpex.Reporting.Filesetup._Spec._StartpointInformation.New
         [Test]
         public void It_Should_Write_Nor_Std_Information()
         {
-            ConsoleImpl.AssertWasCalled(x => x.Info("       nor_std  [Creates a complete package with norwegian standard reports]"));
+            ConsoleImpl.AssertWasCalled(x => x.Info("       nor_std  [Creates a complete package with norwegian standard reports and compresses it]"));
         }
 
         [Test]
         public void It_Should_Write_Nor_Utv_Information()
         {
-            ConsoleImpl.AssertWasCalled(x => x.Info("       nor_utv  [Creates a complete package with norwegian extended reports]"));
+            ConsoleImpl.AssertWasCalled(x => x.Info("       nor_utv  [Creates a complete package with norwegian extended reports and compresses it]"));
         }
 
         [Test]
         public void It_Should_Write_Eng_Std_Information()
         {
-            ConsoleImpl.AssertWasCalled(x => x.Info("       eng_std  [Creates a complete package with english standard reports]"));
+            ConsoleImpl.AssertWasCalled(x => x.Info("       eng_std  [Creates a complete package with english standard reports and compresses it]"));
         }
 
         [Test]
         public void It_Should_Write_Eng_Utv_Information()
         {
-            ConsoleImpl.AssertWasCalled(x => x.Info("       eng_utv  [Creates a complete package with english extended reports]"));
+            ConsoleImpl.AssertWasCalled(x => x.Info("       eng_utv  [Creates a complete package with english extended reports and compresses it]"));
         }
 
         [Test]
